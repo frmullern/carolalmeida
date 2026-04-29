@@ -1,0 +1,1996 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Manual de Identidade Visual — Rodrigues Almeida Advocacia</title>
+<style>
+  /* ─────────────────────────  Fonts  ───────────────────────── */
+  @font-face{
+    font-family:"Felix Titling";
+    src:url("assets/fonts/FelixTitling.ttf") format("truetype");
+    font-weight:400; font-style:normal; font-display:swap;
+  }
+  @font-face{font-family:"TT Chocolates";src:url("assets/fonts/TTChocolates-Light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap;}
+  @font-face{font-family:"TT Chocolates";src:url("assets/fonts/TTChocolates-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+  @font-face{font-family:"TT Chocolates";src:url("assets/fonts/TTChocolates-Italic.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap;}
+  @font-face{font-family:"TT Chocolates";src:url("assets/fonts/TTChocolates-Medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap;}
+  @font-face{font-family:"TT Chocolates";src:url("assets/fonts/TTChocolates-DemiBold.otf") format("opentype");font-weight:600;font-style:normal;font-display:swap;}
+  @font-face{font-family:"TT Chocolates";src:url("assets/fonts/TTChocolates-Bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap;}
+
+  /* ─────────────────────────  Tokens  ───────────────────────── */
+  :root{
+    --brown:#4A2B16;
+    --brown-deep:#24170F;
+    --gold:#B9853B;
+    --bronze:#8A612C;
+    --paper:#F6F0E8;
+    --paper-warm:#EFE6D6;
+    --beige:#D8C1A4;
+    --warm-grey:#D1D1CF;
+    --graphite:#2B2B2B;
+    --black:#000000;
+    --white:#FFFFFF;
+    --rule:rgba(74,43,22,.18);
+    --rule-strong:rgba(74,43,22,.32);
+
+    --serif:"Felix Titling","Cormorant Garamond","Trajan Pro",Georgia,serif;
+    --sans:"TT Chocolates","Inter","Helvetica Neue",Arial,sans-serif;
+
+    --gutter:clamp(20px,4.2vw,72px);
+    --col:1180px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{background:var(--paper);color:var(--brown-deep);}
+  body{
+    font-family:var(--sans);
+    font-weight:400;
+    font-size:15px;
+    line-height:1.65;
+    letter-spacing:.005em;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;}
+
+  /* ─────────────────────────  Type system  ───────────────────────── */
+  .serif{font-family:var(--serif);font-weight:400;letter-spacing:.02em;}
+  .eyebrow{
+    font-family:var(--sans);
+    font-weight:500;
+    font-size:11px;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--bronze);
+  }
+  .num{
+    font-family:var(--serif);
+    font-size:13px;
+    letter-spacing:.18em;
+    color:var(--bronze);
+  }
+  .h-display{
+    font-family:var(--serif);
+    font-size:clamp(44px,7.4vw,108px);
+    line-height:1.02;
+    letter-spacing:.015em;
+    color:var(--brown-deep);
+  }
+  .h-section{
+    font-family:var(--serif);
+    font-size:clamp(34px,4.6vw,64px);
+    line-height:1.05;
+    letter-spacing:.018em;
+    color:var(--brown-deep);
+  }
+  .h-block{
+    font-family:var(--serif);
+    font-size:clamp(22px,2.2vw,30px);
+    line-height:1.15;
+    letter-spacing:.02em;
+    color:var(--brown-deep);
+  }
+  .lede{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:clamp(20px,2vw,26px);
+    line-height:1.4;
+    color:var(--brown);
+    letter-spacing:.005em;
+    text-wrap:pretty;
+  }
+  p{text-wrap:pretty;}
+  .body-lg{font-size:17px;line-height:1.7;color:var(--graphite);max-width:62ch;}
+  .body{font-size:15px;line-height:1.7;color:var(--graphite);max-width:62ch;}
+  .small{font-size:12px;letter-spacing:.04em;color:var(--bronze);}
+  .caps{text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:500;}
+
+  /* ─────────────────────────  Layout  ───────────────────────── */
+  .wrap{max-width:var(--col);margin:0 auto;padding:0 var(--gutter);}
+  .wrap-wide{max-width:1480px;margin:0 auto;padding:0 var(--gutter);}
+  section{position:relative;}
+  .section-pad{padding:clamp(80px,10vw,160px) 0;}
+  .rule{height:1px;background:var(--rule);}
+  .rule-gold{height:1px;background:linear-gradient(90deg,transparent,var(--gold) 30%,var(--gold) 70%,transparent);}
+  .col-2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,96px);align-items:start;}
+  .col-3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,40px);}
+  .col-4{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,1.8vw,32px);}
+  @media (max-width:880px){
+    .col-2,.col-3,.col-4{grid-template-columns:1fr;}
+  }
+
+  .section-head{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:clamp(24px,4vw,72px);
+    align-items:end;
+    padding-bottom:clamp(40px,5vw,72px);
+    border-bottom:1px solid var(--rule);
+    margin-bottom:clamp(48px,6vw,96px);
+  }
+  .section-head .index{
+    font-family:var(--serif);
+    color:var(--gold);
+    font-size:clamp(28px,3vw,42px);
+    letter-spacing:.05em;
+    line-height:1;
+    align-self:end;
+    padding-bottom:8px;
+  }
+  .section-head .title-stack .eyebrow{margin-bottom:18px;display:block;}
+  .section-head .title-stack h2{margin:0;}
+
+  /* ─────────────────────────  Side nav  ───────────────────────── */
+  .nav-toggle{
+    position:fixed; top:24px; right:24px; z-index:60;
+    width:48px;height:48px;border-radius:50%;
+    background:var(--brown-deep);color:var(--paper);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 24px rgba(36,23,15,.18);
+    transition:transform .3s ease,background .3s;
+  }
+  .nav-toggle:hover{background:var(--brown);}
+  .nav-toggle svg{width:18px;height:18px;}
+  .nav-toggle .close{display:none;}
+  body.nav-open .nav-toggle .open{display:none;}
+  body.nav-open .nav-toggle .close{display:block;}
+
+  .sidenav{
+    position:fixed; top:0; right:0; height:100vh; width:min(420px,86vw);
+    background:var(--brown-deep); color:var(--paper);
+    transform:translateX(100%);
+    transition:transform .55s cubic-bezier(.7,0,.2,1);
+    z-index:55; padding:96px 48px 48px;
+    overflow-y:auto;
+    border-left:1px solid rgba(185,133,59,.25);
+  }
+  body.nav-open .sidenav{transform:translateX(0);}
+  .sidenav .nav-eye{font-family:var(--sans);font-size:10px;letter-spacing:.34em;color:var(--gold);text-transform:uppercase;margin-bottom:24px;}
+  .sidenav .nav-title{font-family:var(--serif);font-size:22px;letter-spacing:.04em;color:var(--paper);margin-bottom:36px;line-height:1.2;}
+  .sidenav .rule{background:rgba(246,240,232,.18);margin-bottom:24px;}
+  .sidenav ol{list-style:none;counter-reset:nav;}
+  .sidenav ol li{counter-increment:nav;}
+  .sidenav ol a{
+    display:grid;grid-template-columns:42px 1fr;gap:8px;
+    padding:11px 0; border-bottom:1px solid rgba(246,240,232,.08);
+    font-family:var(--sans);font-size:14px;letter-spacing:.02em;
+    color:rgba(246,240,232,.85);
+    transition:color .25s, padding-left .25s;
+  }
+  .sidenav ol a::before{
+    content:counter(nav,decimal-leading-zero);
+    font-family:var(--serif);color:var(--gold);font-size:13px;letter-spacing:.1em;
+  }
+  .sidenav ol a:hover{color:var(--paper);padding-left:6px;}
+  .scrim{position:fixed;inset:0;background:rgba(36,23,15,.45);opacity:0;pointer-events:none;transition:opacity .4s;z-index:50;}
+  body.nav-open .scrim{opacity:1;pointer-events:auto;}
+
+  /* ─────────────────────────  Top brand strip  ───────────────────────── */
+  .top-strip{
+    position:fixed;top:0;left:0;right:0;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px clamp(20px,4vw,40px);
+    z-index:40;mix-blend-mode:normal;
+    pointer-events:none;
+  }
+  .top-strip .mark{
+    font-family:var(--serif);
+    color:var(--brown-deep);
+    font-size:13px;letter-spacing:.32em;text-transform:uppercase;
+  }
+  .top-strip .meta{
+    font-family:var(--sans);
+    font-size:11px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--bronze);
+  }
+  body.on-dark .top-strip .mark{color:var(--paper);}
+  body.on-dark .top-strip .meta{color:var(--beige);}
+  body.on-dark .nav-toggle{background:var(--paper);color:var(--brown-deep);}
+
+  /* ─────────────────────────  Reveal  ───────────────────────── */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ─────────────────────────  Hero  ───────────────────────── */
+  .hero{
+    min-height:100vh;
+    background:var(--paper);
+    position:relative;
+    display:flex;align-items:center;
+    overflow:hidden;
+    padding-top:120px; padding-bottom:80px;
+  }
+  .hero::before{
+    /* enormous RA monogram watermark */
+    content:"RA";
+    position:absolute;right:-4vw;bottom:-12vw;
+    font-family:var(--serif);
+    font-size:min(74vh,52vw);
+    color:var(--brown);
+    opacity:.05;
+    letter-spacing:-.02em;
+    line-height:.85;
+    pointer-events:none;
+    user-select:none;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(40px,6vw,96px);
+    align-items:center;width:100%;
+  }
+  @media(max-width:880px){.hero-grid{grid-template-columns:1fr;}}
+  .hero .crest{
+    position:relative; aspect-ratio: 3/4;
+    background:var(--brown-deep);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 30px 80px rgba(36,23,15,.25);
+  }
+  .hero .crest::after{
+    content:"";position:absolute;inset:18px;border:1px solid rgba(185,133,59,.4);pointer-events:none;
+  }
+  .hero .crest img{width:62%;height:auto;}
+  .hero .meta-line{display:flex;gap:18px;align-items:center;margin-bottom:32px;}
+  .hero .meta-line .dash{width:48px;height:1px;background:var(--gold);}
+  .hero h1{margin:24px 0 28px;}
+  .hero .frase{
+    border-left:2px solid var(--gold);
+    padding:6px 0 6px 22px;
+    margin-top:36px;
+    max-width:46ch;
+  }
+  .hero-foot{
+    position:absolute;bottom:32px;left:0;right:0;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:0 clamp(20px,4vw,40px);
+    font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--bronze);
+  }
+  .hero-foot .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);display:inline-block;margin:0 10px;vertical-align:middle;}
+
+  /* ─────────────────────────  Section: presentation  ───────────────────────── */
+  #presentation{background:var(--paper);}
+  #presentation .col-2{align-items:start;}
+  .quoteblock{
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+    padding:48px 0;
+    margin-top:48px;
+  }
+  .signature{
+    margin-top:32px;display:flex;align-items:center;gap:18px;
+    font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze);
+  }
+  .signature .swash{font-family:var(--serif);color:var(--gold);font-size:24px;}
+
+  /* ─────────────────────────  Essence cards  ───────────────────────── */
+  #essence{background:var(--paper-warm);}
+  .essence-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border-top:1px solid var(--rule);border-left:1px solid var(--rule);}
+  .essence-grid .card{
+    background:var(--paper-warm);
+    padding:40px 32px 56px;
+    min-height:280px;
+    display:flex;flex-direction:column;justify-content:space-between;
+    border-right:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+    transition:background .4s;
+  }
+  .essence-grid .card:hover{background:var(--paper);}
+  .essence-grid .card .num{font-size:11px;letter-spacing:.18em;}
+  .essence-grid .card h3{font-family:var(--serif);font-size:30px;letter-spacing:.02em;color:var(--brown-deep);margin:60px 0 16px;line-height:1.1;}
+  .essence-grid .card p{font-size:13.5px;line-height:1.65;color:var(--graphite);}
+  @media(max-width:980px){.essence-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:540px){.essence-grid{grid-template-columns:1fr;}}
+
+  /* ─────────────────────────  Concept  ───────────────────────── */
+  #concept{background:var(--brown-deep);color:var(--paper);}
+  #concept .h-section, #concept .lede, #concept p, #concept .num{color:var(--paper);}
+  #concept .eyebrow{color:var(--gold);}
+  #concept .section-head{border-bottom-color:rgba(246,240,232,.15);}
+  #concept .body{color:rgba(246,240,232,.78);}
+  .monogram-stage{
+    background:linear-gradient(180deg,#1a0f08 0%,#24170F 100%);
+    aspect-ratio: 5/6;
+    position:relative;
+    display:flex;align-items:center;justify-content:center;
+    border:1px solid rgba(185,133,59,.25);
+  }
+  .monogram-stage img{width:54%;height:auto;filter:drop-shadow(0 0 60px rgba(185,133,59,.15));}
+  .monogram-stage .corner{position:absolute;width:24px;height:24px;border:1px solid var(--gold);}
+  .monogram-stage .c-tl{top:14px;left:14px;border-right:0;border-bottom:0;}
+  .monogram-stage .c-tr{top:14px;right:14px;border-left:0;border-bottom:0;}
+  .monogram-stage .c-bl{bottom:14px;left:14px;border-right:0;border-top:0;}
+  .monogram-stage .c-br{bottom:14px;right:14px;border-left:0;border-top:0;}
+  .concept-pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:80px;border-top:1px solid rgba(246,240,232,.15);}
+  .concept-pillars .pill{
+    padding:32px 24px 0;
+    border-right:1px solid rgba(246,240,232,.15);
+  }
+  .concept-pillars .pill:last-child{border-right:0;}
+  .concept-pillars .pill .num{display:block;margin-bottom:16px;color:var(--gold);}
+  .concept-pillars .pill h4{font-family:var(--serif);font-size:22px;letter-spacing:.03em;margin-bottom:8px;}
+  .concept-pillars .pill p{font-size:13px;line-height:1.6;color:rgba(246,240,232,.65);}
+  @media(max-width:880px){.concept-pillars{grid-template-columns:1fr 1fr;}.concept-pillars .pill{border-bottom:1px solid rgba(246,240,232,.15);padding-bottom:32px;}}
+
+  /* ─────────────────────────  Logo principal  ───────────────────────── */
+  .logo-stage{
+    aspect-ratio: 4/5;
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .logo-stage img{width:62%;height:auto;}
+  .logo-stage .label{
+    position:absolute;bottom:18px;left:20px;right:20px;
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:10px;letter-spacing:.28em;text-transform:uppercase;
+  }
+  .stage-paper{background:var(--paper);}
+  .stage-paper .label{color:var(--bronze);}
+  .stage-brown{background:var(--brown);}
+  .stage-brown .label{color:var(--beige);}
+  .stage-black{background:var(--black);}
+  .stage-black .label{color:var(--gold);}
+  .stage-gold{background:var(--gold);}
+  .stage-gold .label{color:var(--brown-deep);}
+  .stage-mono{background:var(--paper-warm);}
+  .stage-mono .label{color:var(--bronze);}
+  .stage-deep{background:var(--brown-deep);}
+  .stage-deep .label{color:var(--beige);}
+
+  .logo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+  @media(max-width:880px){.logo-row{grid-template-columns:1fr 1fr;}}
+
+  /* ─────────────────────────  Variações  ───────────────────────── */
+  .variations{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .variations .v{
+    background:var(--paper);
+    border:1px solid var(--rule);
+    padding:32px;
+    aspect-ratio: 4/3;
+    display:flex;flex-direction:column;justify-content:space-between;
+    position:relative;
+  }
+  .variations .v.dark{background:var(--brown-deep);}
+  .variations .v.dark .v-tag{color:var(--gold);}
+  .variations .v.dark .v-name{color:var(--paper);}
+  .variations .v.dark .v-desc{color:rgba(246,240,232,.6);}
+  .variations .v .stage-inner{flex:1;display:flex;align-items:center;justify-content:center;}
+  .variations .v .stage-inner img{max-width:75%;max-height:120px;height:auto;}
+  .variations .v .v-tag{font-family:var(--serif);font-size:11px;letter-spacing:.22em;color:var(--bronze);}
+  .variations .v .v-name{font-family:var(--serif);font-size:18px;letter-spacing:.02em;color:var(--brown-deep);margin-top:6px;}
+  .variations .v .v-desc{font-size:11.5px;letter-spacing:.04em;color:var(--graphite);opacity:.72;margin-top:4px;}
+  .variations .v.tall{grid-row:span 2;aspect-ratio:auto;min-height:480px;}
+  @media(max-width:880px){.variations{grid-template-columns:1fr 1fr;} .variations .v.tall{grid-row:auto;min-height:340px;}}
+
+  /* ─────────────────────────  Diagram  ───────────────────────── */
+  .diagram-frame{
+    background:var(--paper-warm);
+    padding:clamp(24px,4vw,64px);
+    aspect-ratio: 5/4;
+    position:relative;
+    overflow:hidden;
+    border:1px solid var(--rule);
+  }
+  .diagram-frame .grid-bg{
+    position:absolute;inset:0;
+    background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);
+    background-size:32px 32px;
+    opacity:.5;
+  }
+  .diagram-frame .protect{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    border:1px dashed var(--gold);
+    padding:14% 18%;
+    background:rgba(246,240,232,.35);
+  }
+  .diagram-frame .protect img{width:100%;height:auto;max-width:340px;}
+  .diagram-frame .protect-label{
+    position:absolute;left:18px;top:18px;
+    font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--bronze);
+  }
+  .diagram-frame .x-mark{
+    position:absolute;font-family:var(--serif);font-size:13px;color:var(--bronze);
+  }
+  .diagram-frame .x-tl{top:18%;left:18%;}
+  .diagram-frame .x-tr{top:18%;right:18%;}
+  .diagram-frame .x-bl{bottom:18%;left:18%;}
+  .diagram-frame .x-br{bottom:18%;right:18%;}
+
+  /* ─────────────────────────  Reduction  ───────────────────────── */
+  .reduction-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .red-card{background:var(--paper);border:1px solid var(--rule);padding:40px 28px 28px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;min-height:260px;}
+  .red-card .num{margin-bottom:32px;}
+  .red-card .preview{flex:1;display:flex;align-items:center;width:100%;}
+  .red-card .preview img{height:auto;max-width:100%;}
+  .red-card .meta{margin-top:28px;border-top:1px solid var(--rule);padding-top:14px;width:100%;}
+  .red-card .meta .lbl{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--bronze);}
+  .red-card .meta .val{font-family:var(--serif);font-size:18px;color:var(--brown-deep);margin-top:4px;letter-spacing:.04em;}
+  @media(max-width:880px){.reduction-grid{grid-template-columns:1fr 1fr;}}
+
+  /* ─────────────────────────  Color palette  ───────────────────────── */
+  .palette{display:grid;grid-template-columns:repeat(5,1fr);gap:0;}
+  .palette .swatch{
+    aspect-ratio: 3/4;
+    padding:24px 22px;
+    display:flex;flex-direction:column;justify-content:space-between;
+    color:var(--paper);
+    position:relative;
+    transition:transform .5s cubic-bezier(.2,.7,.2,1);
+  }
+  .palette .swatch:hover{transform:translateY(-6px);}
+  .palette .swatch .top{display:flex;justify-content:space-between;align-items:flex-start;}
+  .palette .swatch .role{font-size:10px;letter-spacing:.28em;text-transform:uppercase;opacity:.7;}
+  .palette .swatch .nm{font-family:var(--serif);font-size:22px;letter-spacing:.02em;line-height:1.15;}
+  .palette .swatch .hex{font-family:var(--serif);font-size:13px;letter-spacing:.18em;opacity:.85;margin-top:4px;}
+  .palette .swatch.light{color:var(--brown-deep);}
+  .palette .swatch.light .role{opacity:.55;}
+  @media(max-width:980px){.palette{grid-template-columns:repeat(2,1fr);}}
+
+  /* ─────────────────────────  Typography  ───────────────────────── */
+  .type-spec{display:grid;grid-template-columns:200px 1fr;gap:48px;border-top:1px solid var(--rule);padding:48px 0;align-items:start;}
+  .type-spec .meta-col .nm{font-family:var(--serif);font-size:24px;letter-spacing:.04em;color:var(--brown-deep);}
+  .type-spec .meta-col .role{margin-top:6px;}
+  .type-spec .meta-col .weights{margin-top:24px;font-size:12px;letter-spacing:.04em;color:var(--graphite);line-height:1.8;}
+  .type-spec .specimen-felix{font-family:var(--serif);font-size:clamp(60px,11vw,160px);line-height:.95;letter-spacing:.01em;color:var(--brown-deep);}
+  .type-spec .specimen-tt{font-family:var(--sans);font-size:clamp(50px,9vw,128px);line-height:.95;letter-spacing:-.01em;color:var(--brown-deep);font-weight:300;}
+  .type-spec .alpha{margin-top:16px;font-family:var(--serif);font-size:18px;letter-spacing:.18em;color:var(--bronze);}
+  .type-spec .alpha-tt{font-family:var(--sans);font-weight:400;letter-spacing:.04em;color:var(--bronze);font-size:14px;margin-top:14px;}
+  @media(max-width:780px){.type-spec{grid-template-columns:1fr;gap:24px;}}
+
+  .hierarchy-stack > div{padding:24px 0;border-bottom:1px dotted var(--rule);}
+  .hierarchy-stack .lbl{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--bronze);margin-bottom:10px;}
+  .h-title-ex{font-family:var(--serif);font-size:48px;letter-spacing:.02em;color:var(--brown-deep);}
+  .h-sub-ex{font-family:var(--sans);font-weight:500;font-size:20px;letter-spacing:.06em;text-transform:uppercase;color:var(--brown);}
+  .h-body-ex{font-family:var(--sans);font-size:15.5px;line-height:1.7;color:var(--graphite);max-width:60ch;}
+  .h-cap-ex{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);}
+  .h-btn-ex{display:inline-block;padding:14px 28px;background:var(--brown-deep);color:var(--paper);font-size:11px;letter-spacing:.28em;text-transform:uppercase;}
+  .h-quote-ex{font-family:var(--serif);font-style:italic;font-size:24px;line-height:1.4;color:var(--brown);max-width:50ch;}
+
+  /* ─────────────────────────  Composition layouts  ───────────────────────── */
+  .compo{
+    display:grid;grid-template-columns:repeat(12,1fr);gap:24px;
+    background:var(--paper-warm);
+    padding:clamp(28px,4vw,56px);
+    border:1px solid var(--rule);
+    min-height:420px;
+  }
+  .compo .label{grid-column:1/13;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--bronze);}
+  .compo .a-mark{grid-column:1/4;display:flex;align-items:center;}
+  .compo .a-mark img{width:100%;}
+  .compo .a-content{grid-column:5/13;border-left:1px solid var(--rule);padding-left:32px;display:flex;flex-direction:column;justify-content:center;}
+  .compo .a-content h4{font-family:var(--serif);font-size:34px;line-height:1.1;letter-spacing:.02em;color:var(--brown-deep);margin-bottom:12px;}
+  .compo .a-content p{font-size:14px;line-height:1.7;color:var(--graphite);max-width:48ch;}
+  .compo.layout-b{background:var(--brown);color:var(--paper);}
+  .compo.layout-b .label{color:var(--beige);}
+  .compo.layout-b .a-content{border-left-color:rgba(246,240,232,.25);}
+  .compo.layout-b .a-content h4{color:var(--paper);}
+  .compo.layout-b .a-content p{color:rgba(246,240,232,.78);}
+
+  /* ─────────────────────────  Graphic elements  ───────────────────────── */
+  .gx-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .gx-card{background:var(--paper);border:1px solid var(--rule);aspect-ratio: 4/3;padding:32px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;}
+  .gx-card .top{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--bronze);position:relative;z-index:2;}
+  .gx-card .bot{font-family:var(--serif);font-size:18px;letter-spacing:.02em;color:var(--brown-deep);position:relative;z-index:2;}
+  .gx-card.dark{background:var(--brown-deep);}
+  .gx-card.dark .top{color:var(--gold);}
+  .gx-card.dark .bot{color:var(--paper);}
+  /* lines */
+  .gx-lines .demo{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:14px;padding:0 32px;}
+  .gx-lines .demo span{display:block;height:1px;}
+  .gx-lines .demo span:nth-child(1){background:var(--gold);width:20%;}
+  .gx-lines .demo span:nth-child(2){background:var(--brown);width:60%;}
+  .gx-lines .demo span:nth-child(3){background:var(--gold);width:35%;height:2px;}
+  .gx-lines .demo span:nth-child(4){background:rgba(74,43,22,.4);width:80%;}
+  .gx-lines .demo span:nth-child(5){background:var(--brown);width:18%;}
+  /* moldura */
+  .gx-frame .demo{position:absolute;inset:32px;border:1px solid var(--gold);}
+  .gx-frame .demo::after{content:"";position:absolute;inset:8px;border:1px solid rgba(74,43,22,.4);}
+  /* watermark */
+  .gx-watermark{background:var(--brown);}
+  .gx-watermark .top{color:var(--beige);}
+  .gx-watermark .bot{color:var(--paper);}
+  .gx-watermark::before{
+    content:"RA";position:absolute;
+    font-family:var(--serif);font-size:200px;color:var(--paper);opacity:.06;
+    right:-20px;bottom:-50px;line-height:.85;
+  }
+  /* pattern */
+  .gx-pattern{background:var(--paper-warm);}
+  .gx-pattern::before{
+    content:"";position:absolute;inset:0;
+    background-image:
+      radial-gradient(circle at 25% 25%, var(--bronze) 0.6px, transparent 1.2px),
+      radial-gradient(circle at 75% 75%, var(--brown) 0.6px, transparent 1.2px);
+    background-size:28px 28px;opacity:.45;
+  }
+  /* selo */
+  .gx-seal{background:var(--brown-deep);display:flex;align-items:center;justify-content:center;}
+  .gx-seal .seal{
+    width:62%;aspect-ratio:1;border-radius:50%;
+    border:1px solid var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+  }
+  .gx-seal .seal::before{
+    content:"";position:absolute;inset:10px;border-radius:50%;border:1px dashed rgba(185,133,59,.5);
+  }
+  .gx-seal .seal img{width:38%;}
+  .gx-seal .seal-text{position:absolute;inset:-2px;animation:rot 30s linear infinite;}
+  /* divisor */
+  .gx-divider .demo{position:absolute;left:32px;right:32px;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:14px;}
+  .gx-divider .demo .li{flex:1;height:1px;background:var(--brown);}
+  .gx-divider .demo .di{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);}
+  .gx-divider .demo .ra{font-family:var(--serif);font-size:14px;letter-spacing:.32em;color:var(--bronze);}
+
+  /* ─────────────────────────  Photography moodboard  ───────────────────────── */
+  #photo{background:var(--paper-warm);}
+  .mood-grid{
+    display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:140px;gap:8px;
+  }
+  .mood-grid .tile{
+    background:var(--brown);
+    position:relative;overflow:hidden;
+    color:var(--beige);
+    padding:14px;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  }
+  .mood-grid .tile span{position:relative;z-index:2;color:var(--paper);font-family:var(--serif);font-size:13px;letter-spacing:.18em;}
+  .mood-grid .tile small{position:relative;z-index:2;color:rgba(246,240,232,.55);font-size:9px;letter-spacing:.32em;display:block;margin-top:4px;}
+  .mood-grid .tile::before{
+    content:"";position:absolute;inset:0;opacity:.6;
+    background:
+      repeating-linear-gradient(45deg, transparent 0 10px, rgba(255,255,255,.03) 10px 11px),
+      linear-gradient(135deg, var(--bronze) 0%, var(--brown-deep) 100%);
+  }
+  .mood-grid .t-1{grid-column:span 3;grid-row:span 2;}
+  .mood-grid .t-2{grid-column:span 2;grid-row:span 1;}
+  .mood-grid .t-3{grid-column:span 1;grid-row:span 1;}
+  .mood-grid .t-4{grid-column:span 2;grid-row:span 1;background:var(--beige);}
+  .mood-grid .t-4::before{background:repeating-linear-gradient(90deg, transparent 0 8px, rgba(74,43,22,.06) 8px 9px), linear-gradient(180deg, var(--beige), #c9b08c);}
+  .mood-grid .t-4 span,.mood-grid .t-4 small{color:var(--brown-deep);}
+  .mood-grid .t-5{grid-column:span 1;grid-row:span 1;background:var(--paper);}
+  .mood-grid .t-5::before{background:repeating-linear-gradient(0deg, transparent 0 12px, rgba(74,43,22,.05) 12px 13px);}
+  .mood-grid .t-5 span,.mood-grid .t-5 small{color:var(--brown);}
+  .mood-grid .t-6{grid-column:span 2;grid-row:span 2;}
+  .mood-grid .t-6::before{background:linear-gradient(160deg, #2b1809, #5e3a1d 60%, #8a612c);}
+  .mood-grid .t-7{grid-column:span 2;grid-row:span 1;}
+  .mood-grid .t-8{grid-column:span 2;grid-row:span 1;background:var(--brown-deep);}
+  .mood-grid .t-8::before{background:radial-gradient(circle at 30% 30%, rgba(185,133,59,.3), transparent 50%), var(--brown-deep);}
+  .mood-grid .t-9{grid-column:span 4;grid-row:span 1;background:var(--paper);}
+  .mood-grid .t-9::before{background:repeating-linear-gradient(45deg, transparent 0 14px, rgba(74,43,22,.04) 14px 15px);}
+  .mood-grid .t-9 span,.mood-grid .t-9 small{color:var(--brown);}
+  @media(max-width:880px){.mood-grid{grid-template-columns:repeat(2,1fr);}.mood-grid .tile{grid-column:auto !important;grid-row:auto !important;height:160px;}}
+
+  .do-dont{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:64px;}
+  .do-dont .col{padding:36px;background:var(--paper);border:1px solid var(--rule);}
+  .do-dont .col.dont{background:var(--brown-deep);color:var(--paper);}
+  .do-dont .col h5{font-family:var(--sans);font-size:11px;letter-spacing:.32em;text-transform:uppercase;margin-bottom:24px;color:var(--bronze);}
+  .do-dont .col.dont h5{color:var(--gold);}
+  .do-dont .col ul{list-style:none;}
+  .do-dont .col li{padding:10px 0;border-bottom:1px solid var(--rule);font-size:14px;display:flex;gap:14px;align-items:center;}
+  .do-dont .col.dont li{border-bottom-color:rgba(246,240,232,.12);color:rgba(246,240,232,.85);}
+  .do-dont .col li::before{content:"+";font-family:var(--serif);color:var(--gold);font-size:14px;width:14px;}
+  .do-dont .col.dont li::before{content:"×";color:var(--gold);}
+  @media(max-width:780px){.do-dont{grid-template-columns:1fr;}}
+
+  /* ─────────────────────────  Stationery  ───────────────────────── */
+  #stationery{background:var(--paper);}
+  .stat-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;}
+  .stat-tile{background:var(--paper-warm);border:1px solid var(--rule);padding:32px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;min-height:280px;}
+  .stat-tile .tag{position:absolute;top:18px;left:18px;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--bronze);z-index:2;}
+  .stat-tile h5{font-family:var(--serif);font-size:20px;color:var(--brown-deep);letter-spacing:.02em;position:relative;z-index:2;}
+  .stat-tile small{font-size:11px;color:var(--graphite);opacity:.65;letter-spacing:.04em;position:relative;z-index:2;margin-top:4px;}
+
+  /* card visita */
+  .stat-card{grid-column:span 6;min-height:380px;background:var(--paper);}
+  .biz-cards{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:28px;padding:60px;}
+  .biz-card{
+    width:48%;aspect-ratio: 16/9;
+    box-shadow:0 18px 40px rgba(36,23,15,.18),0 1px 3px rgba(0,0,0,.06);
+    position:relative;overflow:hidden;
+    transform:rotate(-3deg);
+    transition:transform .5s;
+  }
+  .biz-card:nth-child(2){transform:rotate(2deg);}
+  .biz-card:hover{transform:rotate(0) scale(1.04);}
+  .biz-card.front{background:var(--paper);padding:18px;display:flex;flex-direction:column;justify-content:space-between;}
+  .biz-card.front .name{font-family:var(--serif);font-size:13px;color:var(--brown-deep);letter-spacing:.04em;}
+  .biz-card.front .role{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze);margin-top:2px;}
+  .biz-card.front .contact{font-size:8px;letter-spacing:.04em;color:var(--graphite);line-height:1.5;}
+  .biz-card.front .mini-mark{font-family:var(--serif);font-size:18px;color:var(--brown);letter-spacing:.04em;}
+  .biz-card.back{background:var(--brown-deep);display:flex;align-items:center;justify-content:center;}
+  .biz-card.back img{width:30%;}
+
+  /* timbrado */
+  .stat-letter{grid-column:span 6;min-height:380px;}
+  .letter-paper{position:absolute;inset:36px;background:var(--paper);box-shadow:0 18px 50px rgba(36,23,15,.16);padding:28px 26px;display:flex;flex-direction:column;}
+  .letter-paper .lhead{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--rule);padding-bottom:14px;}
+  .letter-paper .lhead .mini{font-family:var(--serif);font-size:14px;color:var(--brown-deep);letter-spacing:.04em;}
+  .letter-paper .lhead .mini small{display:block;font-family:var(--sans);font-size:7px;letter-spacing:.32em;color:var(--bronze);margin-top:2px;}
+  .letter-paper .lhead .ref{font-size:7px;letter-spacing:.18em;color:var(--bronze);text-align:right;line-height:1.7;}
+  .letter-paper .lbody{flex:1;padding-top:16px;display:flex;flex-direction:column;gap:6px;}
+  .letter-paper .lbody .ln{height:5px;background:var(--rule);border-radius:1px;}
+  .letter-paper .lbody .ln.short{width:60%;}
+  .letter-paper .lbody .ln.med{width:80%;}
+  .letter-paper .lfoot{border-top:1px solid var(--rule);padding-top:8px;display:flex;justify-content:space-between;font-size:6px;letter-spacing:.22em;color:var(--bronze);}
+
+  /* envelope */
+  .stat-env{grid-column:span 4;min-height:280px;}
+  .env-mock{position:absolute;inset:30px;background:var(--paper);box-shadow:0 14px 36px rgba(36,23,15,.18);padding:22px;display:flex;flex-direction:column;justify-content:space-between;}
+  .env-mock .em-head{display:flex;justify-content:space-between;align-items:flex-start;}
+  .env-mock .em-head .mini{font-family:var(--serif);font-size:11px;color:var(--brown-deep);letter-spacing:.04em;}
+  .env-mock .em-head .mini small{display:block;font-size:6px;letter-spacing:.32em;color:var(--bronze);margin-top:2px;}
+  .env-mock .em-flap{position:absolute;left:0;right:0;bottom:0;height:50%;background:linear-gradient(180deg,transparent 0%,rgba(74,43,22,.04) 100%);border-top:1px solid var(--rule);}
+
+  .stat-folder{grid-column:span 4;min-height:280px;background:var(--brown);}
+  .stat-folder .tag{color:var(--beige);}
+  .stat-folder h5{color:var(--paper);}
+  .stat-folder small{color:rgba(246,240,232,.55);}
+  .stat-folder::before{
+    content:"";position:absolute;inset:30px;
+    background:var(--brown-deep);
+    box-shadow:0 14px 36px rgba(0,0,0,.3);
+  }
+  .stat-folder::after{
+    content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:30%;aspect-ratio:1;
+    background-image:url("assets/logo-dark.png");
+    background-size:contain;background-repeat:no-repeat;background-position:center;
+    opacity:.85;
+  }
+
+  .stat-email{grid-column:span 4;min-height:280px;background:var(--paper-warm);padding:0;}
+  .em-sig{position:absolute;inset:30px;background:var(--paper);box-shadow:0 12px 30px rgba(36,23,15,.12);padding:20px;display:flex;gap:14px;align-items:center;}
+  .em-sig img{width:54px;height:auto;}
+  .em-sig .sg{border-left:1px solid var(--rule);padding-left:14px;}
+  .em-sig .sg .nm{font-family:var(--serif);font-size:13px;color:var(--brown-deep);letter-spacing:.04em;}
+  .em-sig .sg .rl{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze);margin-top:2px;}
+  .em-sig .sg .ct{font-size:9px;color:var(--graphite);margin-top:6px;line-height:1.6;}
+
+  .stat-plaque{grid-column:span 6;min-height:340px;background:linear-gradient(180deg,#3a2210,#1c1009);}
+  .stat-plaque .tag{color:var(--gold);}
+  .stat-plaque h5{color:var(--paper);}
+  .stat-plaque small{color:rgba(246,240,232,.55);}
+  .plaque-mock{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:62%;aspect-ratio: 5/3;background:var(--paper-warm);box-shadow:0 24px 60px rgba(0,0,0,.5),inset 0 0 0 1px var(--gold);display:flex;align-items:center;justify-content:center;}
+  .plaque-mock img{width:42%;}
+
+  .stat-doc{grid-column:span 6;min-height:340px;background:var(--paper-warm);}
+  .doc-stack{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:62%;aspect-ratio: 4/5;}
+  .doc-stack .sheet{position:absolute;inset:0;background:var(--paper);box-shadow:0 18px 40px rgba(36,23,15,.18);padding:28px;display:flex;flex-direction:column;}
+  .doc-stack .sheet:nth-child(1){transform:translate(-12px,-8px) rotate(-2deg);}
+  .doc-stack .sheet:nth-child(2){transform:translate(8px,4px) rotate(1.5deg);}
+  .doc-stack .sheet .h{font-family:var(--serif);font-size:11px;color:var(--brown-deep);letter-spacing:.04em;border-bottom:1px solid var(--rule);padding-bottom:8px;}
+  .doc-stack .sheet .h small{font-family:var(--sans);font-size:6px;letter-spacing:.32em;display:block;color:var(--bronze);margin-top:2px;}
+  .doc-stack .sheet .ln{height:3px;background:var(--rule);margin-top:7px;border-radius:1px;}
+  .doc-stack .sheet .ln.s{width:60%;}
+  .doc-stack .sheet .ln.m{width:80%;}
+
+  @media(max-width:880px){
+    .stat-card,.stat-letter,.stat-folder,.stat-env,.stat-email,.stat-plaque,.stat-doc{grid-column:span 12;}
+  }
+
+  /* ─────────────────────────  Digital  ───────────────────────── */
+  #digital{background:var(--brown-deep);color:var(--paper);}
+  #digital .h-section,#digital .num,#digital .body,#digital p{color:var(--paper);}
+  #digital .body{color:rgba(246,240,232,.78);}
+  #digital .eyebrow{color:var(--gold);}
+  #digital .section-head{border-bottom-color:rgba(246,240,232,.15);}
+
+  .digi-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;}
+
+  .avatar{aspect-ratio:1;border-radius:50%;background:var(--paper);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .avatar.brown{background:var(--brown);}
+  .avatar img{width:62%;}
+
+  .digi-avatars{grid-column:span 4;background:rgba(246,240,232,.04);border:1px solid rgba(246,240,232,.1);padding:32px;display:flex;flex-direction:column;gap:18px;}
+  .digi-avatars .row{display:flex;gap:16px;}
+  .digi-avatars .row .avatar{flex:1;}
+  .digi-avatars .lbl{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);}
+
+  .digi-post{grid-column:span 4;}
+  .igpost{aspect-ratio:1;background:var(--paper);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:32px;}
+  .igpost.brown{background:var(--brown);}
+  .igpost.brown *{color:var(--paper) !important;}
+  .igpost.deep{background:var(--brown-deep);border:1px solid rgba(185,133,59,.3);}
+  .igpost.deep *{color:var(--paper) !important;}
+  .igpost .top{display:flex;justify-content:space-between;align-items:flex-start;font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--bronze);}
+  .igpost .top img{width:28px;height:28px;}
+  .igpost .center{font-family:var(--serif);font-size:32px;line-height:1.15;letter-spacing:.02em;color:var(--brown-deep);max-width:90%;}
+  .igpost .bot{display:flex;justify-content:space-between;align-items:flex-end;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--bronze);}
+  .igpost .accent{height:1px;width:48px;background:var(--gold);margin-bottom:12px;}
+
+  .digi-stories{grid-column:span 4;display:flex;gap:12px;}
+  .story{flex:1;aspect-ratio:9/16;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:24px;}
+  .story.paper{background:var(--paper);}
+  .story.paper *{color:var(--brown-deep);}
+  .story.brown{background:var(--brown);}
+  .story.brown *{color:var(--paper);}
+  .story .top{font-size:8px;letter-spacing:.32em;text-transform:uppercase;}
+  .story .center{font-family:var(--serif);font-size:24px;line-height:1.2;letter-spacing:.02em;}
+  .story .cta{font-size:9px;letter-spacing:.22em;text-transform:uppercase;border:1px solid currentColor;padding:8px 14px;align-self:flex-start;}
+  .story .gold-line{height:1px;width:36px;background:var(--gold);}
+
+  .digi-carousel{grid-column:span 12;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  .digi-carousel .igpost{aspect-ratio:1;}
+  @media(max-width:880px){
+    .digi-avatars,.digi-post,.digi-stories,.digi-carousel{grid-column:span 12;}
+    .digi-carousel{grid-template-columns:repeat(2,1fr);}
+  }
+
+  .highlight-row{display:flex;gap:18px;margin-top:48px;flex-wrap:wrap;}
+  .hl{
+    width:84px;height:84px;border-radius:50%;
+    background:var(--brown);
+    border:1px solid rgba(185,133,59,.4);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-size:11px;letter-spacing:.18em;color:var(--gold);text-align:center;
+    text-transform:uppercase;
+    transition:transform .35s,background .35s;
+  }
+  .hl:hover{transform:translateY(-4px);background:var(--brown-deep);}
+  .hl small{display:block;line-height:1.2;}
+
+  /* ─────────────────────────  Templates IG  ───────────────────────── */
+  #templates{background:var(--paper);}
+  .tpl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  .tpl-grid .igpost{aspect-ratio:1;}
+  @media(max-width:780px){.tpl-grid{grid-template-columns:1fr 1fr;}}
+  .tpl-meta{margin-top:18px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze);text-align:center;}
+
+  /* ─────────────────────────  Website preview  ───────────────────────── */
+  #website{background:var(--paper-warm);}
+  .web-frame{
+    background:var(--paper);
+    border:1px solid var(--rule);
+    box-shadow:0 30px 80px rgba(36,23,15,.12);
+    overflow:hidden;
+  }
+  .web-bar{display:flex;align-items:center;gap:6px;padding:12px 16px;border-bottom:1px solid var(--rule);background:var(--paper-warm);}
+  .web-bar .dot{width:10px;height:10px;border-radius:50%;background:var(--rule-strong);}
+  .web-bar .url{flex:1;text-align:center;font-size:10px;letter-spacing:.18em;color:var(--bronze);font-family:var(--sans);}
+  .web-nav{display:flex;justify-content:space-between;align-items:center;padding:24px 36px;border-bottom:1px solid var(--rule);}
+  .web-nav .logo{font-family:var(--serif);font-size:16px;color:var(--brown-deep);letter-spacing:.04em;}
+  .web-nav .logo small{display:block;font-family:var(--sans);font-size:7px;letter-spacing:.32em;color:var(--bronze);margin-top:2px;}
+  .web-nav ul{display:flex;gap:28px;list-style:none;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--graphite);}
+  .web-nav .cta{padding:10px 18px;background:var(--brown-deep);color:var(--paper);font-size:10px;letter-spacing:.22em;text-transform:uppercase;}
+  .web-hero{padding:80px 36px 100px;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;border-bottom:1px solid var(--rule);position:relative;}
+  .web-hero::before{
+    content:"RA";position:absolute;right:-2vw;bottom:-6vw;font-family:var(--serif);font-size:22vw;color:var(--brown);opacity:.04;line-height:.85;
+  }
+  .web-hero .eye{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--bronze);margin-bottom:24px;}
+  .web-hero h2{font-family:var(--serif);font-size:54px;line-height:1.05;color:var(--brown-deep);letter-spacing:.02em;}
+  .web-hero h2 em{color:var(--gold);font-style:italic;}
+  .web-hero p{margin-top:24px;font-size:14px;line-height:1.7;color:var(--graphite);max-width:48ch;}
+  .web-hero .cta-row{margin-top:32px;display:flex;gap:14px;}
+  .web-hero .cta-row .btn{padding:14px 24px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;}
+  .web-hero .cta-row .btn.primary{background:var(--brown-deep);color:var(--paper);}
+  .web-hero .cta-row .btn.ghost{border:1px solid var(--brown);color:var(--brown);}
+  .web-hero .crest{aspect-ratio:3/4;background:var(--brown-deep);display:flex;align-items:center;justify-content:center;border:1px solid rgba(185,133,59,.25);position:relative;}
+  .web-hero .crest::after{content:"";position:absolute;inset:14px;border:1px solid rgba(185,133,59,.3);}
+  .web-hero .crest img{width:60%;}
+  .web-areas{padding:80px 36px;border-bottom:1px solid var(--rule);}
+  .web-areas .heads{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;border-bottom:1px solid var(--rule);padding-bottom:24px;}
+  .web-areas .heads h3{font-family:var(--serif);font-size:36px;color:var(--brown-deep);letter-spacing:.02em;}
+  .web-areas .heads .meta{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--bronze);}
+  .web-areas .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule);}
+  .web-areas .grid .area{padding:32px 0 32px 24px;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule);}
+  .web-areas .grid .area:nth-child(3n){border-right:0;}
+  .web-areas .grid .area .num{font-family:var(--serif);font-size:11px;color:var(--gold);letter-spacing:.18em;}
+  .web-areas .grid .area h4{font-family:var(--serif);font-size:22px;color:var(--brown-deep);margin:32px 0 12px;letter-spacing:.02em;}
+  .web-areas .grid .area p{font-size:13px;color:var(--graphite);line-height:1.6;max-width:34ch;}
+  .web-foot{background:var(--brown-deep);color:var(--paper);padding:64px 36px 36px;}
+  .web-foot .top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:32px;border-bottom:1px solid rgba(246,240,232,.15);padding-bottom:36px;}
+  .web-foot h5{font-family:var(--serif);font-size:24px;letter-spacing:.04em;color:var(--paper);}
+  .web-foot h5 small{display:block;font-family:var(--sans);font-size:8px;letter-spacing:.32em;color:var(--gold);margin-top:6px;}
+  .web-foot .col-h{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+  .web-foot ul{list-style:none;font-size:12px;line-height:2;color:rgba(246,240,232,.7);}
+  .web-foot .copy{padding-top:24px;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(246,240,232,.5);}
+  @media(max-width:880px){
+    .web-hero{grid-template-columns:1fr;padding:48px 24px 64px;}
+    .web-hero h2{font-size:36px;}
+    .web-areas .grid{grid-template-columns:1fr;}
+    .web-areas .grid .area{border-right:0;}
+    .web-foot .top{grid-template-columns:1fr;}
+  }
+
+  /* ─────────────────────────  Voice  ───────────────────────── */
+  #voice{background:var(--paper);}
+  .voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  .voice-grid .col{padding:48px;border:1px solid var(--rule);background:var(--paper-warm);}
+  .voice-grid .col.bad{background:var(--paper);}
+  .voice-grid .col .lbl{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--bronze);margin-bottom:16px;}
+  .voice-grid .col.bad .lbl::before{content:"× ";color:var(--graphite);}
+  .voice-grid .col.good .lbl::before{content:"+ ";color:var(--gold);}
+  .voice-grid .col p{font-family:var(--serif);font-size:22px;line-height:1.4;color:var(--brown-deep);font-style:italic;}
+  @media(max-width:780px){.voice-grid{grid-template-columns:1fr;}}
+  .voice-attrs{display:flex;flex-wrap:wrap;gap:8px;margin-top:48px;}
+  .voice-attrs .chip{padding:10px 20px;border:1px solid var(--rule-strong);font-family:var(--serif);font-size:14px;letter-spacing:.04em;color:var(--brown);}
+
+  /* ─────────────────────────  Misuse  ───────────────────────── */
+  #misuse{background:var(--paper-warm);}
+  .misuse-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  .mis{
+    aspect-ratio:1;background:var(--paper);border:1px solid var(--rule);
+    padding:24px;
+    display:flex;flex-direction:column;justify-content:space-between;
+    position:relative;overflow:hidden;
+  }
+  .mis .x{
+    position:absolute;top:18px;right:18px;
+    width:28px;height:28px;border-radius:50%;
+    background:var(--brown-deep);color:var(--paper);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-size:14px;
+  }
+  .mis .preview{flex:1;display:flex;align-items:center;justify-content:center;}
+  .mis .preview img{max-width:60%;max-height:80px;height:auto;}
+  .mis .desc{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--graphite);}
+  .mis.distort .preview img{transform:scaleX(1.4) scaleY(.7);}
+  .mis.colorshift .preview img{filter:hue-rotate(150deg) saturate(2);}
+  .mis.shadow .preview img{filter:drop-shadow(6px 8px 0 var(--gold));}
+  .mis.busy{background:repeating-linear-gradient(45deg,var(--paper) 0 8px,var(--beige) 8px 16px,var(--brown) 16px 18px,var(--gold) 18px 22px);}
+  .mis.neon{background:#1a1a1a;}
+  .mis.neon .preview img{filter:hue-rotate(20deg) saturate(3) brightness(1.6) drop-shadow(0 0 12px #ffd34f);}
+  .mis.neon .desc{color:var(--paper);}
+  .mis.tiny .preview img{max-width:18%;max-height:30px;}
+  .mis.font-sub .preview{font-family:Arial,sans-serif;font-weight:900;font-size:24px;color:var(--brown-deep);text-transform:uppercase;letter-spacing:.04em;}
+  .mis.cliche .preview::before{content:"⚖";font-size:60px;color:var(--gold);}
+  @media(max-width:780px){.misuse-grid{grid-template-columns:1fr 1fr;}}
+
+  /* ─────────────────────────  Outro  ───────────────────────── */
+  #outro{background:var(--brown-deep);color:var(--paper);min-height:90vh;display:flex;align-items:center;text-align:center;padding:120px 0;position:relative;overflow:hidden;}
+  #outro::before{content:"RA";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--serif);font-size:min(80vh,68vw);color:var(--paper);opacity:.04;line-height:.85;letter-spacing:-.02em;}
+  #outro .inner{position:relative;z-index:2;}
+  #outro .crest-out{width:140px;margin:0 auto 40px;}
+  #outro .crest-out img{width:100%;}
+  #outro .frase-final{font-family:var(--serif);font-size:clamp(28px,3.6vw,52px);line-height:1.25;letter-spacing:.02em;max-width:18ch;margin:0 auto;color:var(--paper);}
+  #outro .frase-final em{color:var(--gold);font-style:italic;}
+  #outro .colofon{margin-top:64px;display:flex;justify-content:center;gap:18px;align-items:center;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--beige);}
+  #outro .colofon .dash{width:36px;height:1px;background:var(--gold);}
+
+  @keyframes rot { to { transform:rotate(360deg);} }
+
+  /* small screens */
+  @media(max-width:640px){
+    .hero-grid{gap:32px;}
+    .section-head{grid-template-columns:1fr;gap:16px;}
+    .top-strip .meta{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Top brand strip -->
+<div class="top-strip">
+  <div class="mark">Rodrigues Almeida — Manual de Marca</div>
+  <div class="meta">2026 · v1.0 · Edição Carolina</div>
+</div>
+
+<!-- Side nav -->
+<button class="nav-toggle" id="navToggle" aria-label="Sumário">
+  <svg class="open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  <svg class="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 5l14 14M19 5L5 19"/></svg>
+</button>
+<div class="scrim" id="scrim"></div>
+<aside class="sidenav" id="sidenav">
+  <div class="nav-eye">Sumário</div>
+  <div class="nav-title">Manual de Identidade Visual<br><span style="font-family:var(--sans);font-size:10px;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;">Rodrigues Almeida Advocacia</span></div>
+  <div class="rule"></div>
+  <ol>
+    <li><a href="#cover">Capa</a></li>
+    <li><a href="#presentation">Apresentação da marca</a></li>
+    <li><a href="#essence">Essência</a></li>
+    <li><a href="#concept">Conceito visual</a></li>
+    <li><a href="#logo-main">Logo principal</a></li>
+    <li><a href="#variations">Variações</a></li>
+    <li><a href="#protection">Área de proteção</a></li>
+    <li><a href="#reduction">Redução mínima</a></li>
+    <li><a href="#palette">Paleta de cores</a></li>
+    <li><a href="#typography">Tipografia</a></li>
+    <li><a href="#hierarchy">Hierarquia visual</a></li>
+    <li><a href="#graphic">Elementos gráficos</a></li>
+    <li><a href="#photo">Estilo fotográfico</a></li>
+    <li><a href="#stationery">Aplicações institucionais</a></li>
+    <li><a href="#digital">Aplicações digitais</a></li>
+    <li><a href="#templates">Templates sociais</a></li>
+    <li><a href="#website">Direção para website</a></li>
+    <li><a href="#voice">Tom de voz</a></li>
+    <li><a href="#misuse">Usos incorretos</a></li>
+    <li><a href="#outro">Encerramento</a></li>
+  </ol>
+</aside>
+
+<!-- ════════════════════════════  01  COVER  ════════════════════════════ -->
+<section id="cover" class="hero" data-screen-label="01 Capa">
+  <div class="wrap-wide hero-grid">
+    <div>
+      <div class="meta-line">
+        <span class="dash"></span>
+        <span class="caps" style="color:var(--bronze);">Manual · 2026 · vol. 01</span>
+      </div>
+      <div class="eyebrow">Identidade Visual</div>
+      <h1 class="h-display">Manual de<br>Identidade<br><em style="font-style:italic;color:var(--gold);">Visual</em></h1>
+      <div class="frase">
+        <p class="lede">Uma identidade jurídica sóbria, elegante e institucional, criada para transmitir confiança, clareza e sofisticação.</p>
+      </div>
+      <div class="signature" style="margin-top:48px;">
+        <span class="swash">·</span>
+        <span>Rodrigues Almeida Advocacia</span>
+      </div>
+    </div>
+    <div class="crest reveal">
+      <img src="assets/logo-dark.png" alt="Monograma RA" />
+    </div>
+  </div>
+  <div class="hero-foot">
+    <span>Tomazina · Norte Pioneiro · Paraná</span>
+    <span>Brand Book Digital <span class="dot"></span> Edição 2026</span>
+  </div>
+</section>
+
+<!-- ════════════════════════════  02  PRESENTATION  ════════════════════════════ -->
+<section id="presentation" class="section-pad">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">02</div>
+      <div class="title-stack">
+        <span class="eyebrow">Apresentação da marca</span>
+        <h2 class="h-section">Uma evolução institucional,<br>preservando a elegância de quem a construiu.</h2>
+      </div>
+    </div>
+    <div class="col-2">
+      <div>
+        <p class="lede">Rodrigues Almeida Advocacia nasce como a maturidade institucional da atuação de Carolina Rodrigues Almeida — preservando a proximidade e o cuidado do atendimento, mas com uma presença mais sólida, profissional e preparada para crescer.</p>
+        <div class="rule" style="margin:48px 0;"></div>
+        <p class="body-lg">A marca traduz a transição de uma assinatura pessoal para uma identidade de escritório. Mantém a sobriedade que sempre caracterizou a atuação da advogada, agora articulada num sistema visual capaz de sustentar website, papelaria, redes sociais e materiais institucionais com coerência editorial.</p>
+        <p class="body" style="margin-top:24px;">A construção parte de três decisões claras: um monograma RA elegante e atemporal, uma paleta de marrons, dourado e off-white que afasta o clichê jurídico, e uma tipografia serifada nobre apoiada por uma sans-serif contemporânea.</p>
+      </div>
+      <div>
+        <div class="quoteblock" style="border-top:0;padding-top:0;margin-top:0;">
+          <span class="caps" style="color:var(--bronze);">Posicionamento</span>
+          <p class="lede" style="margin-top:24px;">Advocacia premium, mas acessível.<br>Institucional, mas humana.<br>Clássica, mas atual.</p>
+        </div>
+        <div class="col-2" style="gap:24px;margin-top:48px;">
+          <div>
+            <span class="num">i.</span>
+            <h3 class="h-block" style="margin-top:8px;font-size:20px;">Atuação</h3>
+            <p class="body" style="font-size:13.5px;margin-top:8px;">Pessoa física e jurídica, com especialização em recuperação de crédito, consultoria contratual, trabalhista, civil bancário, propriedade e família.</p>
+          </div>
+          <div>
+            <span class="num">ii.</span>
+            <h3 class="h-block" style="margin-top:8px;font-size:20px;">Região</h3>
+            <p class="body" style="font-size:13.5px;margin-top:8px;">Tomazina e cidades do norte pioneiro do Paraná, com extensão digital para todo o território nacional.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  03  ESSENCE  ════════════════════════════ -->
+<section id="essence" class="section-pad">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">03</div>
+      <div class="title-stack">
+        <span class="eyebrow">Essência da marca</span>
+        <h2 class="h-section">Oito atributos que sustentam<br>cada decisão de design.</h2>
+      </div>
+    </div>
+  </div>
+  <div class="wrap-wide">
+    <div class="essence-grid">
+      <div class="card"><span class="num">i.</span><div><h3>Confiança</h3><p>A base do vínculo entre advogado e cliente. Cada elemento visual reforça compromisso e seriedade.</p></div></div>
+      <div class="card"><span class="num">ii.</span><div><h3>Segurança</h3><p>Formas estáveis, hierarquia clara, proporções clássicas. A marca transmite firmeza antes de falar.</p></div></div>
+      <div class="card"><span class="num">iii.</span><div><h3>Clareza</h3><p>Composição limpa, espaço respiratório e linguagem direta — para que a informação chegue antes da estética.</p></div></div>
+      <div class="card"><span class="num">iv.</span><div><h3>Sobriedade</h3><p>Sem ruído, sem excesso decorativo. A elegância está no que se decidiu não dizer.</p></div></div>
+      <div class="card"><span class="num">v.</span><div><h3>Sofisticação</h3><p>Materiais nobres, tipografia serifada e paleta encorpada — como uma biblioteca jurídica em tons quentes.</p></div></div>
+      <div class="card"><span class="num">vi.</span><div><h3>Proximidade</h3><p>A formalidade convive com escuta. Tom acessível, atendimento humano e linguagem sem juridiquês.</p></div></div>
+      <div class="card"><span class="num">vii.</span><div><h3>Institucionalidade</h3><p>Estética de escritório boutique, com aparência de marca consolidada — preparada para escalar.</p></div></div>
+      <div class="card"><span class="num">viii.</span><div><h3>Autoridade</h3><p>Domínio técnico expresso de forma silenciosa — sem ostentação, sem clichês jurídicos.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  04  CONCEPT  ════════════════════════════ -->
+<section id="concept" class="section-pad" data-on-dark="true">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index" style="color:var(--gold);">04</div>
+      <div class="title-stack">
+        <span class="eyebrow">Conceito visual</span>
+        <h2 class="h-section">O monograma RA.<br>Um encontro silencioso de equilíbrio.</h2>
+      </div>
+    </div>
+    <div class="col-2" style="align-items:center;">
+      <div class="monogram-stage reveal">
+        <span class="corner c-tl"></span><span class="corner c-tr"></span>
+        <span class="corner c-bl"></span><span class="corner c-br"></span>
+        <img src="assets/logo-dark.png" alt="Monograma RA" />
+      </div>
+      <div>
+        <p class="lede" style="color:var(--paper);">O monograma RA representa Rodrigues Almeida e traduz tradição, equilíbrio, elegância e autoridade.</p>
+        <div class="rule" style="background:rgba(246,240,232,.18);margin:32px 0;"></div>
+        <p class="body" style="color:rgba(246,240,232,.78);">A construção parte de uma serifa clássica — vertical, contrastada, encorpada na haste e leve no terminal. Os traços do R e do A se entrelaçam em um único gesto: a perna do A nasce do interior do R, e seu vértice se prolonga para cima como um eixo de continuidade.</p>
+        <p class="body" style="color:rgba(246,240,232,.78);margin-top:18px;">A leitura é dupla. Há uma assinatura nobre, atemporal, de cartório elegante. E há, sutilmente, uma sugestão de equilíbrio — um eixo central, dois braços, uma simetria — que conversa com a ideia de justiça sem recorrer ao clichê do martelo, da balança ou do livro.</p>
+      </div>
+    </div>
+    <div class="concept-pillars">
+      <div class="pill"><span class="num">i.</span><h4>Tradição</h4><p>Serifa clássica, proporções verticalizadas, ritmo de coluna jurídica.</p></div>
+      <div class="pill"><span class="num">ii.</span><h4>Equilíbrio</h4><p>O A simétrico ancorado no R sugere prumo, sem literalidade.</p></div>
+      <div class="pill"><span class="num">iii.</span><h4>Elegância</h4><p>Contraste fino entre haste e terminal, gesto editorial.</p></div>
+      <div class="pill"><span class="num">iv.</span><h4>Autoridade</h4><p>Leitura sólida, presença alta, ausência de adornos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  05  LOGO PRINCIPAL  ════════════════════════════ -->
+<section id="logo-main" class="section-pad">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">05</div>
+      <div class="title-stack">
+        <span class="eyebrow">Logo principal</span>
+        <h2 class="h-section">A assinatura completa,<br>aplicada em seis registros.</h2>
+      </div>
+    </div>
+    <p class="body-lg" style="margin-bottom:64px;">A marca se compõe pelo monograma RA, o nome <em>Rodrigues Almeida</em> em Felix Titling e o complemento <em>Advocacia</em> em TT Chocolates. Estas são as aplicações de referência para qualquer fundo institucional.</p>
+  </div>
+  <div class="wrap-wide">
+    <div class="logo-row">
+      <div class="logo-stage stage-paper"><img src="assets/logo-dark.png" alt=""><div class="label"><span>Off-white papel</span><span>#F6F0E8</span></div></div>
+      <div class="logo-stage stage-brown"><img src="assets/logo-light.png" alt=""><div class="label"><span>Marrom institucional</span><span>#4A2B16</span></div></div>
+      <div class="logo-stage stage-deep"><img src="assets/logo-light.png" alt=""><div class="label"><span>Marrom profundo</span><span>#24170F</span></div></div>
+      <div class="logo-stage stage-black"><img src="assets/logo-light.png" alt=""><div class="label"><span>Preto institucional</span><span>#000000</span></div></div>
+      <div class="logo-stage stage-gold"><img src="assets/logo-dark.png" alt=""><div class="label"><span>Dourado nobre</span><span>#B9853B</span></div></div>
+      <div class="logo-stage stage-mono"><img src="assets/logo-dark.png" alt="" style="filter:grayscale(1) contrast(1.1);"><div class="label"><span>Monocromática</span><span>Grafite</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  06  VARIATIONS  ════════════════════════════ -->
+<section id="variations" class="section-pad" style="background:var(--paper-warm);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">06</div>
+      <div class="title-stack">
+        <span class="eyebrow">Variações</span>
+        <h2 class="h-section">Um sistema com fôlego<br>para qualquer aplicação.</h2>
+      </div>
+    </div>
+    <div class="variations">
+      <div class="v tall dark">
+        <span class="v-tag">i. Versão principal</span>
+        <div class="stage-inner" style="flex:1;"><img src="assets/logo-light.png" alt="" style="max-height:280px;"></div>
+        <div>
+          <div class="v-name" style="color:var(--paper);">Rodrigues Almeida Advocacia</div>
+          <div class="v-desc">Monograma RA + nome completo + complemento.</div>
+        </div>
+      </div>
+      <div class="v">
+        <span class="v-tag">ii. Versão reduzida</span>
+        <div class="stage-inner"><img src="assets/logo-dark.png" alt="" style="max-height:90px;"></div>
+        <div>
+          <div class="v-name">Rodrigues Almeida</div>
+          <div class="v-desc">Sem complemento — para contextos jurídicos óbvios.</div>
+        </div>
+      </div>
+      <div class="v dark">
+        <span class="v-tag">iii. Monograma isolado</span>
+        <div class="stage-inner"><img src="assets/logo-light.png" alt="" style="max-height:140px;clip-path:inset(0 0 30% 0);"></div>
+        <div>
+          <div class="v-name">RA</div>
+          <div class="v-desc">Avatar, selo, marca d'água e aplicações reduzidas.</div>
+        </div>
+      </div>
+      <div class="v">
+        <span class="v-tag">iv. Versão positiva</span>
+        <div class="stage-inner"><img src="assets/logo-dark.png" alt="" style="max-height:110px;"></div>
+        <div>
+          <div class="v-name">Sobre fundo claro</div>
+          <div class="v-desc">Off-white, bege ou branco — leitura padrão.</div>
+        </div>
+      </div>
+      <div class="v dark">
+        <span class="v-tag">v. Versão negativa</span>
+        <div class="stage-inner"><img src="assets/logo-light.png" alt="" style="max-height:110px;"></div>
+        <div>
+          <div class="v-name">Sobre fundo escuro</div>
+          <div class="v-desc">Marrom, preto ou imagem com contraste pleno.</div>
+        </div>
+      </div>
+      <div class="v" style="background:var(--brown);">
+        <span class="v-tag" style="color:var(--gold);">vi. Versão institucional</span>
+        <div class="stage-inner"><img src="assets/logo-light.png" alt="" style="max-height:110px;filter:brightness(1.05) saturate(1.1);"></div>
+        <div>
+          <div class="v-name" style="color:var(--paper);">Sobre fundo marrom</div>
+          <div class="v-desc" style="color:rgba(246,240,232,.65);">Aplicação oficial em peças institucionais e papelaria.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  07  PROTECTION  ════════════════════════════ -->
+<section id="protection" class="section-pad">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">07</div>
+      <div class="title-stack">
+        <span class="eyebrow">Área de proteção</span>
+        <h2 class="h-section">Espaço para respirar<br>é parte da marca.</h2>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="diagram-frame reveal">
+        <div class="grid-bg"></div>
+        <span class="x-mark x-tl">A</span>
+        <span class="x-mark x-tr">A</span>
+        <span class="x-mark x-bl">A</span>
+        <span class="x-mark x-br">A</span>
+        <div class="protect">
+          <span class="protect-label">Margem mínima</span>
+          <img src="assets/logo-dark.png" alt="" style="width: 300px">
+        </div>
+      </div>
+      <div>
+        <p class="lede">A área de proteção equivale, em todos os lados, à altura da letra <em>A</em> do monograma — ou, no mínimo, à altura da palavra <em>Advocacia</em>.</p>
+        <div class="rule" style="margin:32px 0;"></div>
+        <p class="body">Nenhum elemento gráfico, textual ou fotográfico pode invadir esta margem. Em cabeçalhos, capas e papelaria, recomenda-se ainda dobrar essa medida para reforçar a sensação institucional.</p>
+        <p class="body" style="margin-top:18px;">Quando a marca for aplicada sobre imagens, a área de proteção deve estar visualmente limpa — sem texturas concorrentes, sombras ou elementos contrastantes.</p>
+        <div style="margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:24px;border-top:1px solid var(--rule);padding-top:32px;">
+          <div><span class="caps" style="color:var(--bronze);">Mínimo</span><div class="serif" style="font-size:36px;color:var(--brown-deep);margin-top:8px;letter-spacing:.04em;">1×A</div></div>
+          <div><span class="caps" style="color:var(--bronze);">Recomendado</span><div class="serif" style="font-size:36px;color:var(--brown-deep);margin-top:8px;letter-spacing:.04em;">2×A</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  08  REDUCTION  ════════════════════════════ -->
+<section id="reduction" class="section-pad" style="background:var(--paper-warm);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">08</div>
+      <div class="title-stack">
+        <span class="eyebrow">Redução mínima</span>
+        <h2 class="h-section">Limites de legibilidade<br>para cada suporte.</h2>
+      </div>
+    </div>
+    <div class="reduction-grid">
+      <div class="red-card">
+        <span class="num">i.</span>
+        <div class="preview"><img src="assets/logo-dark.png" alt="" style="width:100%;"></div>
+        <div class="meta"><div class="lbl">Logo digital</div><div class="val">220 px</div></div>
+      </div>
+      <div class="red-card">
+        <span class="num">ii.</span>
+        <div class="preview"><img src="assets/logo-dark.png" alt="" style="width:78%;"></div>
+        <div class="meta"><div class="lbl">Logo impressa</div><div class="val">45 mm</div></div>
+      </div>
+      <div class="red-card">
+        <span class="num">iii.</span>
+        <div class="preview" style="justify-content:center;"><img src="assets/logo-dark.png" alt="" style="width:42%;clip-path:inset(0 0 32% 0);"></div>
+        <div class="meta"><div class="lbl">Monograma digital</div><div class="val">40 px</div></div>
+      </div>
+      <div class="red-card">
+        <span class="num">iv.</span>
+        <div class="preview" style="justify-content:center;"><img src="assets/logo-dark.png" alt="" style="width:30%;clip-path:inset(0 0 32% 0);"></div>
+        <div class="meta"><div class="lbl">Monograma impresso</div><div class="val">12 mm</div></div>
+      </div>
+    </div>
+    <p class="body" style="margin-top:48px;text-align:center;color:var(--bronze);font-size:12px;letter-spacing:.18em;text-transform:uppercase;">Abaixo destes valores a leitura compromete a marca. Use sempre o monograma isolado em aplicações reduzidas.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════  09  PALETTE  ════════════════════════════ -->
+<section id="palette" class="section-pad">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">09</div>
+      <div class="title-stack">
+        <span class="eyebrow">Paleta de cores</span>
+        <h2 class="h-section">Marrom como base.<br>Dourado como gesto.</h2>
+      </div>
+    </div>
+    <p class="body-lg" style="margin-bottom:48px;">A paleta foge do clichê jurídico — sem azuis-marinho, sem vermelhos institucionais — e adota uma cartela quente e encorpada que evoca couro, madeira, papel e luz baixa de biblioteca. O dourado entra com parcimônia, como detalhe nobre.</p>
+  </div>
+  <div class="wrap-wide">
+    <div class="palette">
+      <div class="swatch" style="background:#4A2B16;">
+        <div class="top"><span class="role">Principal · 01</span><span class="hex">#4A2B16</span></div>
+        <div><div class="nm">Marrom<br>institucional</div><p class="small" style="color:rgba(246,240,232,.6);margin-top:14px;">Cor base de fundos institucionais e papelaria.</p></div>
+      </div>
+      <div class="swatch" style="background:#24170F;">
+        <div class="top"><span class="role">Principal · 02</span><span class="hex">#24170F</span></div>
+        <div><div class="nm">Marrom<br>profundo</div><p class="small" style="color:rgba(246,240,232,.6);margin-top:14px;">Tipografia, blocos de respiro e contraste pleno.</p></div>
+      </div>
+      <div class="swatch" style="background:#B9853B;">
+        <div class="top"><span class="role">Acento · 01</span><span class="hex">#B9853B</span></div>
+        <div><div class="nm">Dourado<br>sofisticado</div><p class="small" style="color:rgba(36,23,15,.7);margin-top:14px;">Detalhes nobres, fios, selos e CTAs raros.</p></div>
+      </div>
+      <div class="swatch" style="background:#8A612C;">
+        <div class="top"><span class="role">Acento · 02</span><span class="hex">#8A612C</span></div>
+        <div><div class="nm">Bronze<br>escuro</div><p class="small" style="color:rgba(246,240,232,.65);margin-top:14px;">Subtítulos, eyebrows e numeração editorial.</p></div>
+      </div>
+      <div class="swatch light" style="background:#F6F0E8;">
+        <div class="top"><span class="role">Base</span><span class="hex">#F6F0E8</span></div>
+        <div><div class="nm">Off-white<br>papel</div><p class="small" style="color:var(--bronze);margin-top:14px;">Fundo institucional padrão e suporte de leitura.</p></div>
+      </div>
+    </div>
+    <div class="palette" style="margin-top:1px;">
+      <div class="swatch light" style="background:#D8C1A4;">
+        <div class="top"><span class="role">Suporte · 01</span><span class="hex">#D8C1A4</span></div>
+        <div><div class="nm">Bege<br>quente</div><p class="small" style="color:var(--bronze);margin-top:14px;">Pares de respiro, papelaria interna e capas.</p></div>
+      </div>
+      <div class="swatch light" style="background:#D1D1CF;">
+        <div class="top"><span class="role">Suporte · 02</span><span class="hex">#D1D1CF</span></div>
+        <div><div class="nm">Cinza<br>quente</div><p class="small" style="color:var(--bronze);margin-top:14px;">Linhas, divisores e estados secundários.</p></div>
+      </div>
+      <div class="swatch" style="background:#2B2B2B;">
+        <div class="top"><span class="role">Texto</span><span class="hex">#2B2B2B</span></div>
+        <div><div class="nm">Grafite</div><p class="small" style="color:rgba(246,240,232,.6);margin-top:14px;">Corpo de texto longo, em alternativa ao marrom.</p></div>
+      </div>
+      <div class="swatch" style="background:#000000;">
+        <div class="top"><span class="role">Neutro</span><span class="hex">#000000</span></div>
+        <div><div class="nm">Preto</div><p class="small" style="color:rgba(246,240,232,.6);margin-top:14px;">Aplicações monocromáticas e impressões oficiais.</p></div>
+      </div>
+      <div class="swatch light" style="background:#FFFFFF;border:1px solid var(--rule);">
+        <div class="top"><span class="role">Neutro</span><span class="hex">#FFFFFF</span></div>
+        <div><div class="nm">Branco</div><p class="small" style="color:var(--bronze);margin-top:14px;">Documentos formais e impressão padrão.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  10  TYPOGRAPHY  ════════════════════════════ -->
+<section id="typography" class="section-pad" style="background:var(--paper-warm);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">10</div>
+      <div class="title-stack">
+        <span class="eyebrow">Tipografia</span>
+        <h2 class="h-section">Felix Titling<br>e TT Chocolates.</h2>
+      </div>
+    </div>
+
+    <div class="type-spec">
+      <div class="meta-col">
+        <div class="caps" style="color:var(--bronze);">Tipografia primária</div>
+        <div class="nm" style="margin-top:18px;">Felix Titling</div>
+        <div class="role caps" style="color:var(--bronze);margin-top:8px;">Serifada · Display</div>
+        <div class="weights">
+          Títulos nobres<br>
+          Nome da marca<br>
+          Headings institucionais<br>
+          Chamadas editoriais
+        </div>
+      </div>
+      <div>
+        <div class="specimen-felix">Aa Rr</div>
+        <div class="alpha">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div>
+        <div class="alpha" style="font-size:14px;letter-spacing:.18em;">0 1 2 3 4 5 6 7 8 9 — Æ &amp; • · ,</div>
+      </div>
+    </div>
+
+    <div class="type-spec">
+      <div class="meta-col">
+        <div class="caps" style="color:var(--bronze);">Tipografia secundária</div>
+        <div class="nm" style="margin-top:18px;">TT Chocolates</div>
+        <div class="role caps" style="color:var(--bronze);margin-top:8px;">Sans-serif · Texto</div>
+        <div class="weights">
+          Light · Regular · Medium<br>
+          DemiBold · Bold<br>
+          Subtítulos, corpo de texto<br>
+          Botões, legendas, menu
+        </div>
+      </div>
+      <div>
+        <div class="specimen-tt">Aa Rr</div>
+        <div class="alpha-tt">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k</div>
+        <div class="alpha-tt" style="font-size:13px;">0 1 2 3 4 5 6 7 8 9 — &amp; ( ) ! ? • · ,</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  11  HIERARCHY  ════════════════════════════ -->
+<section id="hierarchy" class="section-pad">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">11</div>
+      <div class="title-stack">
+        <span class="eyebrow">Hierarquia visual</span>
+        <h2 class="h-section">Composições editoriais<br>para uso institucional.</h2>
+      </div>
+    </div>
+
+    <div class="col-2" style="gap:48px;">
+      <div class="hierarchy-stack">
+        <div><div class="lbl">Título · Felix Titling</div><div class="h-title-ex">Atendimento jurídico que respeita o seu tempo.</div></div>
+        <div><div class="lbl">Subtítulo · TT Chocolates Medium</div><div class="h-sub-ex">Áreas de atuação · Pessoa física e jurídica</div></div>
+        <div><div class="lbl">Parágrafo · TT Chocolates Regular</div><div class="h-body-ex">Carolina Rodrigues Almeida atua há três anos com foco em recuperação de crédito empresarial, contratos, direito trabalhista, civil bancário e benefícios previdenciários — sempre com linguagem clara e atendimento próximo.</div></div>
+        <div><div class="lbl">Legenda · TT Chocolates · 11px</div><div class="h-cap-ex">Tomazina · Norte Pioneiro · Paraná</div></div>
+        <div><div class="lbl">Botão · TT Chocolates Medium</div><span class="h-btn-ex">Agendar atendimento</span></div>
+        <div><div class="lbl">Citação institucional · Felix Titling Italic</div><div class="h-quote-ex">"Construir uma posição sólida exige clareza, técnica e presença consistente."</div></div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:24px;">
+        <div class="compo">
+          <div class="label">Composição A · cabeçalho institucional</div>
+          <div class="a-mark"><img src="assets/logo-dark.png" alt=""></div>
+          <div class="a-content">
+            <h4>Sobre o escritório.</h4>
+            <p>Atuação dedicada a empresas e pessoas físicas, com posicionamento sóbrio e atendimento técnico, próximo e didático.</p>
+          </div>
+        </div>
+        <div class="compo layout-b">
+          <div class="label">Composição B · capa de proposta</div>
+          <div class="a-mark"><img src="assets/logo-light.png" alt=""></div>
+          <div class="a-content">
+            <h4>Proposta comercial 2026.</h4>
+            <p>Documento institucional em fundo marrom, marca em negativo e tipografia serifada nas chamadas principais.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  12  GRAPHIC ELEMENTS  ════════════════════════════ -->
+<section id="graphic" class="section-pad" style="background:var(--paper-warm);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">12</div>
+      <div class="title-stack">
+        <span class="eyebrow">Elementos gráficos</span>
+        <h2 class="h-section">Um sistema de apoio<br>silencioso e consistente.</h2>
+      </div>
+    </div>
+  </div>
+  <div class="wrap-wide">
+    <div class="gx-grid">
+      <div class="gx-card gx-lines">
+        <div class="top">i. Linhas finas</div>
+        <div class="demo"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="bot">Hierarquia editorial</div>
+      </div>
+      <div class="gx-card gx-frame">
+        <div class="top">ii. Moldura discreta</div>
+        <div class="demo"></div>
+        <div class="bot">Capas e papelaria</div>
+      </div>
+      <div class="gx-card gx-watermark dark">
+        <div class="top">iii. Marca d'água</div>
+        <div class="bot">RA em baixa opacidade</div>
+      </div>
+      <div class="gx-card gx-pattern">
+        <div class="top">iv. Pattern sutil</div>
+        <div class="bot" style="position:relative;z-index:2;">Repetição em baixa carga</div>
+      </div>
+      <div class="gx-card gx-seal dark">
+        <div class="top">v. Selo institucional</div>
+        <div class="seal">
+          <img src="assets/logo-light.png" alt="" style="clip-path:inset(0 0 30% 0);">
+        </div>
+        <div class="bot">Capas, envelopes e contratos</div>
+      </div>
+      <div class="gx-card gx-divider">
+        <div class="top">vi. Divisor elegante</div>
+        <div class="demo">
+          <span class="li"></span><span class="ra">RA</span><span class="di"></span><span class="li"></span>
+        </div>
+        <div class="bot">Encerramento de seção</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  13  PHOTO  ════════════════════════════ -->
+<section id="photo" class="section-pad">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">13</div>
+      <div class="title-stack">
+        <span class="eyebrow">Estilo fotográfico</span>
+        <h2 class="h-section">Madeira, couro,<br>papel e luz quente.</h2>
+      </div>
+    </div>
+    <p class="body-lg" style="margin-bottom:48px;">A direção fotográfica reforça a estética de escritório boutique. Predominam ambientes com madeira, couro, livros e papelaria, sob iluminação morna e natural. Detalhes de mesa — caneta, agenda, contrato, pasta — substituem com elegância qualquer simbolismo jurídico literal.</p>
+  </div>
+  <div class="wrap-wide">
+    <div class="mood-grid">
+      <div class="tile t-1"><span>Escritório</span><small>Madeira escura · Luz baixa</small></div>
+      <div class="tile t-2"><span>Couro</span><small>Texturas nobres</small></div>
+      <div class="tile t-3"><span>Papel</span><small>Papelaria</small></div>
+      <div class="tile t-4"><span>Bege</span><small>Tons quentes</small></div>
+      <div class="tile t-5"><span>Documentos</span><small>Contratos · Agenda</small></div>
+      <div class="tile t-6"><span>Retrato</span><small>Carolina · Profissional</small></div>
+      <div class="tile t-7"><span>Livros</span><small>Biblioteca jurídica</small></div>
+      <div class="tile t-8"><span>Luz quente</span><small>Atmosfera</small></div>
+      <div class="tile t-9"><span>Detalhes de mesa</span><small>Caneta · Pasta · Pequenos gestos</small></div>
+    </div>
+    <div class="do-dont">
+      <div class="col">
+        <h5>Sim · Adotar</h5>
+        <ul>
+          <li>Ambientes com madeira, couro e tons terrosos</li>
+          <li>Iluminação natural quente, com sombras suaves</li>
+          <li>Retratos profissionais sóbrios da advogada</li>
+          <li>Detalhes de papelaria, agenda, caneta, contrato</li>
+          <li>Composições em ângulos calmos e simétricos</li>
+        </ul>
+      </div>
+      <div class="col dont">
+        <h5>Não · Evitar</h5>
+        <ul>
+          <li>Banco de imagem genérico de "advogados sorrindo"</li>
+          <li>Martelo de juiz, balança literal e livros encenados</li>
+          <li>Cores frias, vibrantes ou saturadas demais</li>
+          <li>Iluminação artificial dura, fundo branco clínico</li>
+          <li>Pessoas apontando para contratos de modo forçado</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  14  STATIONERY  ════════════════════════════ -->
+<section id="stationery" class="section-pad">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">14</div>
+      <div class="title-stack">
+        <span class="eyebrow">Aplicações institucionais</span>
+        <h2 class="h-section">A marca traduzida<br>em peças de escritório.</h2>
+      </div>
+    </div>
+  </div>
+  <div class="wrap-wide">
+    <div class="stat-grid">
+      <div class="stat-tile stat-card">
+        <span class="tag">i. Cartão de visitas</span>
+        <div class="biz-cards">
+          <div class="biz-card front">
+            <img src="assets/logo-dark.png" alt="" style="width:36%;">
+            <div>
+              <div class="name">Carolina Rodrigues Almeida</div>
+              <div class="role">Advogada · OAB/PR</div>
+              <div class="contact" style="margin-top:6px;">contato@rodriguesalmeida.adv.br · Tomazina/PR</div>
+            </div>
+          </div>
+          <div class="biz-card back"><img src="assets/logo-light.png" alt="" style="clip-path:inset(0 0 30% 0);"></div>
+        </div>
+        <h5>Cartão de visitas</h5>
+        <small>Off-white texturizado · 85 × 50 mm · dourado em hot-stamp</small>
+      </div>
+
+      <div class="stat-tile stat-letter">
+        <span class="tag">ii. Papel timbrado</span>
+        <div class="letter-paper">
+          <div class="lhead">
+            <div class="mini">Rodrigues Almeida<small>Advocacia</small></div>
+            <div class="ref">Ref. 2026/__<br>Tomazina/PR</div>
+          </div>
+          <div class="lbody">
+            <div class="ln med"></div><div class="ln"></div><div class="ln short"></div>
+            <div class="ln med" style="margin-top:8px;"></div><div class="ln"></div><div class="ln"></div><div class="ln short"></div>
+          </div>
+          <div class="lfoot"><span>R. Exemplo, 000 · Tomazina/PR</span><span>rodriguesalmeida.adv.br</span></div>
+        </div>
+        <h5 style="position:absolute;left:18px;bottom:18px;">Papel timbrado A4</h5>
+        <small style="position:absolute;left:18px;bottom:6px;">Cabeçalho discreto · Margens generosas</small>
+      </div>
+
+      <div class="stat-tile stat-env">
+        <span class="tag">iii. Envelope</span>
+        <div class="env-mock">
+          <div class="em-head">
+            <div class="mini">RA<small>Advocacia</small></div>
+          </div>
+          <div class="em-flap"></div>
+        </div>
+      </div>
+
+      <div class="stat-tile stat-folder">
+        <span class="tag">iv. Pasta institucional</span>
+        <h5>Pasta marrom</h5>
+        <small>Monograma centralizado em dourado</small>
+      </div>
+
+      <div class="stat-tile stat-email">
+        <span class="tag">v. Assinatura de e-mail</span>
+        <div class="em-sig">
+          <img src="assets/logo-dark.png" alt="">
+          <div class="sg">
+            <div class="nm">Carolina Rodrigues Almeida</div>
+            <div class="rl">Advogada · OAB/PR</div>
+            <div class="ct">contato@rodriguesalmeida.adv.br<br>Tomazina/PR · 8h30 às 17h30</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-tile stat-plaque">
+        <span class="tag">vi. Placa de escritório</span>
+        <div class="plaque-mock">
+          <img src="assets/logo-dark.png" alt="">
+        </div>
+        <h5 style="position:absolute;left:18px;bottom:18px;">Placa institucional</h5>
+        <small style="position:absolute;left:18px;bottom:6px;">Latão escovado · iluminação morna</small>
+      </div>
+
+      <div class="stat-tile stat-doc">
+        <span class="tag">vii. Documento institucional · Capa de proposta</span>
+        <div class="doc-stack">
+          <div class="sheet">
+            <div class="h">Rodrigues Almeida<small>Advocacia</small></div>
+            <div class="ln med" style="margin-top:14px;"></div>
+            <div class="ln s"></div><div class="ln"></div><div class="ln med"></div><div class="ln s"></div>
+          </div>
+          <div class="sheet">
+            <div class="h">Proposta — 2026<small>Documento institucional</small></div>
+            <div class="ln med" style="margin-top:14px;"></div>
+            <div class="ln"></div><div class="ln s"></div><div class="ln med"></div>
+          </div>
+        </div>
+        <h5 style="position:absolute;left:18px;bottom:18px;">Documento &amp; capa de proposta</h5>
+        <small style="position:absolute;left:18px;bottom:6px;">Cabeçalho institucional · Hierarquia editorial</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  15  DIGITAL  ════════════════════════════ -->
+<section id="digital" class="section-pad" data-on-dark="true">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index" style="color:var(--gold);">15</div>
+      <div class="title-stack">
+        <span class="eyebrow">Aplicações digitais</span>
+        <h2 class="h-section">Presença digital,<br>com a mesma sobriedade.</h2>
+      </div>
+    </div>
+  </div>
+  <div class="wrap-wide">
+    <div class="digi-grid">
+      <div class="digi-avatars">
+        <span class="lbl">Avatares · WhatsApp · Instagram · Google</span>
+        <div class="row">
+          <div class="avatar brown"><img src="assets/logo-light.png" alt="" style="clip-path:inset(0 0 30% 0);width:60%;"></div>
+          <div class="avatar"><img src="assets/logo-dark.png" alt="" style="clip-path:inset(0 0 30% 0);width:60%;"></div>
+          <div class="avatar" style="background:#000;"><img src="assets/logo-light.png" alt="" style="clip-path:inset(0 0 30% 0);width:60%;"></div>
+        </div>
+        <small style="font-size:10px;letter-spacing:.04em;color:rgba(246,240,232,.55);line-height:1.6;">Sempre com o monograma RA centralizado e generoso de margem. Off-white para WhatsApp, marrom para Instagram, preto para variações premium.</small>
+      </div>
+      <div class="digi-post">
+        <div class="igpost brown">
+          <div class="top"><span>Rodrigues Almeida</span></div>
+          <div>
+            <div class="accent"></div>
+            <div class="center" style="color:var(--paper);font-size:30px;">Quando o contrato precisa ser revisado, antes de qualquer coisa, é preciso entender.</div>
+          </div>
+          <div class="bot"><span>Post · Autoridade</span><span>@rodriguesalmeida.adv</span></div>
+        </div>
+      </div>
+      <div class="digi-stories">
+        <div class="story paper">
+          <div class="top">Story · Atendimento</div>
+          <div>
+            <div class="gold-line"></div>
+            <div class="center" style="margin-top:14px;">Atendimento de 8h30<br>às 17h30.</div>
+          </div>
+          <div class="cta">Falar no WhatsApp</div>
+        </div>
+        <div class="story brown">
+          <div class="top" style="color:var(--gold);">Story · CTA</div>
+          <div>
+            <div class="gold-line"></div>
+            <div class="center" style="margin-top:14px;">Marque sua<br>análise jurídica.</div>
+          </div>
+          <div class="cta">Agendar</div>
+        </div>
+      </div>
+
+      <div class="digi-carousel">
+        <div class="igpost">
+          <div class="top"><span>01 · Capa</span><img src="assets/logo-dark.png" alt="" style="clip-path:inset(0 0 30% 0);width:36px;"></div>
+          <div><div class="accent"></div><div class="center" style="font-size:26px;">Cobranças abusivas em contratos.</div></div>
+          <div class="bot"><span>Carrossel</span><span>01 / 05</span></div>
+        </div>
+        <div class="igpost" style="background:var(--paper-warm);">
+          <div class="top"><span>02 · Conteúdo</span></div>
+          <div><div class="accent"></div><div class="center" style="font-size:22px;color:var(--brown-deep);">É possível analisar juridicamente cláusulas que parecem desproporcionais.</div></div>
+          <div class="bot"><span>Educativo</span><span>02 / 05</span></div>
+        </div>
+        <div class="igpost deep">
+          <div class="top"><span style="color:var(--gold);">03 · Citação</span></div>
+          <div><div class="accent"></div><div class="center" style="font-style:italic;font-size:24px;">"A revisão contratual é um direito — não um favor."</div></div>
+          <div class="bot"><span style="color:var(--gold);">Carrossel</span><span style="color:var(--gold);">03 / 05</span></div>
+        </div>
+        <div class="igpost brown">
+          <div class="top"><span>04 · CTA</span></div>
+          <div><div class="accent"></div><div class="center" style="font-size:24px;">Agende uma análise jurídica.</div></div>
+          <div class="bot"><span>WhatsApp</span><span>05 / 05</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:80px;border-top:1px solid rgba(246,240,232,.15);padding-top:40px;flex-wrap:wrap;gap:24px;">
+      <div>
+        <div class="caps" style="color:var(--gold);">Destaques de Instagram</div>
+        <h3 class="h-block" style="color:var(--paper);margin-top:14px;font-size:24px;max-width:34ch;">Capas circulares com o monograma RA, organizadas por área de atuação.</h3>
+      </div>
+      <div class="highlight-row">
+        <div class="hl"><small>ESCRITÓRIO</small></div>
+        <div class="hl"><small>EMPRESAS</small></div>
+        <div class="hl"><small>TRABALHISTA</small></div>
+        <div class="hl"><small>CIVIL</small></div>
+        <div class="hl"><small>PREVI-<br>DENCIÁRIO</small></div>
+        <div class="hl"><small>FAMÍLIA</small></div>
+        <div class="hl"><small>CONTATO</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  16  TEMPLATES IG  ════════════════════════════ -->
+<section id="templates" class="section-pad">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">16</div>
+      <div class="title-stack">
+        <span class="eyebrow">Templates sociais</span>
+        <h2 class="h-section">Mini biblioteca<br>para Instagram e Facebook.</h2>
+      </div>
+    </div>
+  </div>
+  <div class="wrap-wide">
+    <div class="tpl-grid">
+      <div>
+        <div class="igpost" style="background:var(--paper-warm);">
+          <div class="top"><span>Autoridade</span></div>
+          <div><div class="accent"></div><div class="center" style="font-size:26px;color:var(--brown-deep);">Recuperação de crédito empresarial com método.</div></div>
+          <div class="bot"><span>Pessoa Jurídica</span><span>RA</span></div>
+        </div>
+        <div class="tpl-meta">i. Post de autoridade</div>
+      </div>
+      <div>
+        <div class="igpost brown">
+          <div class="top"><span>Área</span></div>
+          <div><div class="accent"></div><div class="center" style="font-size:30px;color:var(--paper);">Direito<br>Trabalhista</div></div>
+          <div class="bot"><span>Atuação</span><span>RA</span></div>
+        </div>
+        <div class="tpl-meta">ii. Área de atuação</div>
+      </div>
+      <div>
+        <div class="igpost" style="background:var(--paper);">
+          <div class="top"><span>Educativo</span></div>
+          <div><div class="accent"></div><div class="center" style="font-size:22px;color:var(--brown-deep);">Quando posso pedir BPC/LOAS? Três condições essenciais.</div></div>
+          <div class="bot"><span>Conteúdo</span><span>RA</span></div>
+        </div>
+        <div class="tpl-meta">iii. Post educativo</div>
+      </div>
+      <div>
+        <div class="igpost deep">
+          <div class="top"><span style="color:var(--gold);">Frase</span></div>
+          <div><div class="accent"></div><div class="center" style="font-style:italic;color:var(--paper);font-size:26px;">"Clareza é a forma mais sóbria de autoridade."</div></div>
+          <div class="bot"><span style="color:var(--gold);">Institucional</span><span style="color:var(--gold);">RA</span></div>
+        </div>
+        <div class="tpl-meta">iv. Frase institucional</div>
+      </div>
+      <div>
+        <div class="igpost" style="background:var(--paper-warm);">
+          <div class="top"><span>Carrossel · 01</span></div>
+          <div><div class="accent"></div><div class="center" style="font-size:24px;color:var(--brown-deep);">Como prevenir processos trabalhistas?</div></div>
+          <div class="bot"><span>5 cards</span><span>01 / 05</span></div>
+        </div>
+        <div class="tpl-meta">v. Carrossel informativo</div>
+      </div>
+      <div>
+        <div class="igpost brown" style="aspect-ratio:9/16;background:var(--brown-deep);border:1px solid rgba(185,133,59,.3);">
+          <div class="top" style="color:var(--gold);"><span>Story</span></div>
+          <div><div class="accent"></div><div class="center" style="color:var(--paper);font-size:24px;">Atendimento ágil pelo<br>WhatsApp Business.</div></div>
+          <div class="bot" style="color:var(--gold);"><span>RA</span><span>Atendimento</span></div>
+        </div>
+        <div class="tpl-meta">vi. Story de atendimento</div>
+      </div>
+      <div>
+        <div class="igpost" style="aspect-ratio:9/16;background:var(--paper);">
+          <div class="top"><span>Story · CTA</span></div>
+          <div><div class="accent"></div><div class="center" style="color:var(--brown-deep);font-size:26px;">Fale com o<br>escritório agora.</div></div>
+          <div class="bot"><span style="text-transform:uppercase;color:var(--brown-deep);border:1px solid var(--brown-deep);padding:8px 12px;letter-spacing:.22em;">→ WhatsApp</span></div>
+        </div>
+        <div class="tpl-meta">vii. CTA WhatsApp</div>
+      </div>
+      <div>
+        <div class="igpost brown" style="aspect-ratio:9/16;">
+          <div class="top"><span>Capa de Reels</span></div>
+          <div><div class="accent"></div><div class="center" style="color:var(--paper);font-size:30px;font-style:italic;">3 erros<br>contratuais<br>comuns.</div></div>
+          <div class="bot"><span>Reels</span><span>RA</span></div>
+        </div>
+        <div class="tpl-meta">viii. Capa de Reels</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  17  WEBSITE  ════════════════════════════ -->
+<section id="website" class="section-pad">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">17</div>
+      <div class="title-stack">
+        <span class="eyebrow">Direção para website</span>
+        <h2 class="h-section">Prévia visual<br>do sistema digital.</h2>
+      </div>
+    </div>
+  </div>
+  <div class="wrap-wide">
+    <div class="web-frame">
+      <div class="web-bar">
+        <span class="dot"></span><span class="dot" style="background:#d8a85a;"></span><span class="dot" style="background:#7e9f6a;"></span>
+        <span class="url">rodriguesalmeida.adv.br</span>
+      </div>
+      <div class="web-nav">
+        <div class="logo">Rodrigues Almeida<small>Advocacia</small></div>
+        <ul>
+          <li>Sobre</li><li>Áreas</li><li>Empresas</li><li>Pessoa Física</li><li>Conteúdo</li>
+        </ul>
+        <span class="cta">WhatsApp</span>
+      </div>
+      <div class="web-hero">
+        <div>
+          <div class="eye">Tomazina · Norte Pioneiro · PR</div>
+          <h2>Atuação jurídica<br>sólida, próxima<br>e <em>preparada para o seu tempo.</em></h2>
+          <p>Carolina Rodrigues Almeida atua há três anos no atendimento a empresas e pessoas físicas, com foco em recuperação de crédito, contratos, direito trabalhista, civil bancário e benefícios previdenciários.</p>
+          <div class="cta-row">
+            <span class="btn primary">Agendar atendimento</span>
+            <span class="btn ghost">Conhecer o escritório</span>
+          </div>
+        </div>
+        <div class="crest" style="background-color: rgb(239, 230, 214)"><img src="assets/logo-light.png" alt=""></div>
+      </div>
+      <div class="web-areas">
+        <div class="heads">
+          <h3>Áreas de atuação.</h3>
+          <span class="meta">06 frentes — Pessoa física &amp; jurídica</span>
+        </div>
+        <div class="grid">
+          <div class="area"><span class="num">01</span><h4>Empresarial &amp; Trabalhista</h4><p>Prevenção e defesa em ações trabalhistas, consultoria contínua para empresas e empregadores.</p></div>
+          <div class="area"><span class="num">02</span><h4>Recuperação de crédito</h4><p>Cobranças extrajudiciais e judiciais, execução de cheques e contratos de venda direta.</p></div>
+          <div class="area"><span class="num">03</span><h4>Civil &amp; Contratos</h4><p>Elaboração, revisão e acompanhamento de contratos de pessoa física e jurídica.</p></div>
+          <div class="area"><span class="num">04</span><h4>Civil bancário</h4><p>Revisão de juros, cláusulas abusivas, renegociação e defesa do devedor.</p></div>
+          <div class="area"><span class="num">05</span><h4>Propriedade &amp; Posse</h4><p>Usucapião, aluguéis, arrendamentos rurais, conflitos contratuais imobiliários.</p></div>
+          <div class="area"><span class="num">06</span><h4>Previdenciário &amp; Família</h4><p>Aposentadoria, pensão por morte, BPC/LOAS, guarda, pensão alimentícia.</p></div>
+        </div>
+      </div>
+      <div class="web-foot">
+        <div class="top">
+          <div>
+            <h5>Rodrigues Almeida<small>Advocacia</small></h5>
+            <p style="margin-top:18px;font-size:12px;line-height:1.7;color:rgba(246,240,232,.65);max-width:36ch;">Atendimento jurídico sóbrio e próximo, com presença em Tomazina e cidades do norte pioneiro do Paraná.</p>
+          </div>
+          <div>
+            <div class="col-h">Atendimento</div>
+            <ul>
+              <li>WhatsApp Business</li>
+              <li>contato@rodriguesalmeida.adv.br</li>
+              <li>8h30 às 17h30</li>
+              <li>Tomazina · PR</li>
+            </ul>
+          </div>
+          <div>
+            <div class="col-h">Áreas</div>
+            <ul>
+              <li>Empresas</li>
+              <li>Pessoa Física</li>
+              <li>Recuperação de crédito</li>
+              <li>Família · Previdenciário</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copy">
+          <span>© 2026 · Rodrigues Almeida Advocacia</span>
+          <span>OAB/PR · Carolina Rodrigues Almeida</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  18  VOICE  ════════════════════════════ -->
+<section id="voice" class="section-pad">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">18</div>
+      <div class="title-stack">
+        <span class="eyebrow">Tom de voz</span>
+        <h2 class="h-section">Clara. Segura.<br>Didática. Próxima.</h2>
+      </div>
+    </div>
+    <div class="col-2" style="align-items:start;margin-bottom:48px;">
+      <div>
+        <p class="lede">A comunicação da marca é técnica sem ser distante. Profissional sem ser fria. Próxima sem perder a autoridade.</p>
+      </div>
+      <div>
+        <p class="body">A voz nunca promete resultado, nunca abusa de juridiquês, nunca apela à emoção barata. Quando a linguagem se torna clara, a confiança se torna inevitável.</p>
+        <p class="body" style="margin-top:14px;color:var(--bronze);">Atributos: clara · segura · didática · profissional · próxima · sóbria · acessível · honesta.</p>
+      </div>
+    </div>
+
+    <div class="voice-grid">
+      <div class="col bad">
+        <div class="lbl">Em vez de</div>
+        <p>"Ajuizamento de demanda revisional em face de abusividade contratual."</p>
+      </div>
+      <div class="col good">
+        <div class="lbl">Usar</div>
+        <p>"Se o contrato tem cobranças abusivas, é possível analisar juridicamente o caso e buscar uma solução adequada."</p>
+      </div>
+    </div>
+
+    <div class="voice-attrs">
+      <span class="chip">Clara</span>
+      <span class="chip">Segura</span>
+      <span class="chip">Didática</span>
+      <span class="chip">Profissional</span>
+      <span class="chip">Próxima</span>
+      <span class="chip">Sóbria</span>
+      <span class="chip">Acessível</span>
+      <span class="chip">Honesta</span>
+      <span class="chip">Sem juridiquês</span>
+      <span class="chip">Sem promessa de resultado</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  19  MISUSE  ════════════════════════════ -->
+<section id="misuse" class="section-pad">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">19</div>
+      <div class="title-stack">
+        <span class="eyebrow">Usos incorretos</span>
+        <h2 class="h-section">O que a marca<br>nunca deve ser.</h2>
+      </div>
+    </div>
+  </div>
+  <div class="wrap-wide">
+    <div class="misuse-grid">
+      <div class="mis distort">
+        <span class="x">×</span>
+        <div class="preview"><img src="assets/logo-dark.png" alt=""></div>
+        <div class="desc">i. Não distorcer</div>
+      </div>
+      <div class="mis colorshift">
+        <span class="x">×</span>
+        <div class="preview"><img src="assets/logo-dark.png" alt=""></div>
+        <div class="desc">ii. Não alterar cores</div>
+      </div>
+      <div class="mis shadow">
+        <span class="x">×</span>
+        <div class="preview"><img src="assets/logo-dark.png" alt=""></div>
+        <div class="desc">iii. Sombra exagerada</div>
+      </div>
+      <div class="mis busy">
+        <span class="x">×</span>
+        <div class="preview" style="background:rgba(246,240,232,.7);padding:12px;"><img src="assets/logo-dark.png" alt=""></div>
+        <div class="desc" style="background:var(--paper);padding:6px 10px;">iv. Fundo poluído</div>
+      </div>
+      <div class="mis neon">
+        <span class="x">×</span>
+        <div class="preview"><img src="assets/logo-light.png" alt=""></div>
+        <div class="desc">v. Dourado neon</div>
+      </div>
+      <div class="mis tiny">
+        <span class="x">×</span>
+        <div class="preview"><img src="assets/logo-dark.png" alt=""></div>
+        <div class="desc">vi. Reduzir demais</div>
+      </div>
+      <div class="mis font-sub">
+        <span class="x">×</span>
+        <div class="preview">RA</div>
+        <div class="desc">vii. Substituir fontes</div>
+      </div>
+      <div class="mis cliche">
+        <span class="x">×</span>
+        <div class="preview"></div>
+        <div class="desc">viii. Clichês jurídicos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════  20  OUTRO  ════════════════════════════ -->
+<section id="outro" data-on-dark="true">
+  <div class="wrap inner">
+    <div class="crest-out"><img src="assets/logo-light.png" alt=""></div>
+    <p class="frase-final">Rodrigues Almeida Advocacia — uma presença jurídica <em>sólida, confiável e sofisticada.</em></p>
+    <div class="colofon">
+      <span>Manual de Identidade</span>
+      <span class="dash"></span>
+      <span>Edição 2026 · v1.0</span>
+      <span class="dash"></span>
+      <span>Tomazina · PR</span>
+    </div>
+  </div>
+</section>
+
+<script>
+  // ─────────  Side nav  ─────────
+  const $body=document.body;
+  const $toggle=document.getElementById('navToggle');
+  const $nav=document.getElementById('sidenav');
+  const $scrim=document.getElementById('scrim');
+  const closeNav=()=>$body.classList.remove('nav-open');
+  $toggle.addEventListener('click',()=>$body.classList.toggle('nav-open'));
+  $scrim.addEventListener('click',closeNav);
+  $nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeNav));
+  document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeNav();});
+
+  // ─────────  Reveal on scroll (additive — defaults to visible)  ─────────
+  const revealTargets=document.querySelectorAll('.essence-grid .card, .red-card, .gx-card, .stat-tile, .igpost, .swatch, .mood-grid .tile, .v, .pill, .compo, .crest, .monogram-stage, .diagram-frame');
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.08});
+  revealTargets.forEach(el=>{el.classList.add('reveal');io.observe(el);});
+  // Force-mark anything already in view on load
+  requestAnimationFrame(()=>{
+    revealTargets.forEach(el=>{
+      const r=el.getBoundingClientRect();
+      if(r.top<window.innerHeight && r.bottom>0) el.classList.add('in');
+    });
+  });
+
+  // ─────────  Section dark/light strip toggle  ─────────
+  const darkSections=[...document.querySelectorAll('section[data-on-dark]'),document.querySelector('#cover')].filter(Boolean);
+  // we treat #cover as light (paper), only data-on-dark are dark.
+  const onScroll=()=>{
+    let isDark=false;
+    document.querySelectorAll('section[data-on-dark]').forEach(s=>{
+      const r=s.getBoundingClientRect();
+      if(r.top<60 && r.bottom>60) isDark=true;
+    });
+    $body.classList.toggle('on-dark',isDark);
+  };
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  // ─────────  Smooth scroll for anchors  ─────────
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',(e)=>{
+      const id=a.getAttribute('href');
+      const target=document.querySelector(id);
+      if(target){
+        e.preventDefault();
+        const top=target.getBoundingClientRect().top+window.pageYOffset;
+        window.scrollTo({top,behavior:'smooth'});
+      }
+    });
+  });
+</script>
+</body>
+</html>
